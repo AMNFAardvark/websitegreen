@@ -1,0 +1,20 @@
+URL,Template type,Status code,Canonical target,Indexability,Robots directive,Title length,Meta description length,H1 present (Y/N),Approx word count,Inlinks/Outlinks,Notes
+https://familyvest.com/,home,200,https://familyvest.com/,Indexable,"index, follow",64,223,Y,1054,18/15,
+https://familyvest.com/404,utility,200,https://familyvest.com/404,Non-Indexable,"noindex, follow",27,26,Y,21,1/2,intentionally non-index utility page
+https://familyvest.com/about,about,200,https://familyvest.com/about,Indexable,"index, follow",29,132,Y,593,12/15,
+https://familyvest.com/adv,legal,200,https://familyvest.com/adv,Indexable,"index, follow",23,66,Y,100,16/6,
+https://familyvest.com/autism-resource-navigator,blog,200,https://familyvest.com/autism-resource-navigator,Indexable,"index, follow, max-snippet:-1, max-image-preview:large",97,256,Y,18553,3/16,
+https://familyvest.com/blog,blog,200,https://familyvest.com/blog,Indexable,"index, follow",40,157,Y,683,12/16,
+https://familyvest.com/contact,contact,200,https://familyvest.com/contact,Indexable,"index, follow",31,148,Y,247,16/15,
+https://familyvest.com/disclosures,legal,200,https://familyvest.com/disclosures,Indexable,"index, follow",24,57,Y,161,16/6,
+https://familyvest.com/forgot-password,utility,200,https://familyvest.com/forgot-password,Non-Indexable,"noindex, follow",28,52,Y,37,2/2,intentionally non-index utility page
+https://familyvest.com/get-started,landing,200,https://familyvest.com/get-started,Indexable,"index, follow",35,113,Y,343,12/15,
+https://familyvest.com/investment-management,service,200,https://familyvest.com/investment-management,Indexable,"index, follow",45,240,Y,716,12/15,
+https://familyvest.com/login,utility,200,https://familyvest.com/login,Non-Indexable,"noindex, nofollow",29,37,Y,182,12/16,intentionally non-index utility page
+https://familyvest.com/planning,service,200,https://familyvest.com/planning,Indexable,"index, follow",63,195,Y,968,12/15,
+https://familyvest.com/planning-business-exits,service,200,https://familyvest.com/planning-business-exits,Indexable,"index, follow",67,255,Y,977,12/15,
+https://familyvest.com/planning-retirement,service,200,https://familyvest.com/planning-retirement,Indexable,"index, follow",43,200,Y,819,12/15,
+https://familyvest.com/planning-special-needs,service,200,https://familyvest.com/planning-special-needs,Indexable,"index, follow",46,215,Y,1006,12/16,
+https://familyvest.com/privacy,legal,200,https://familyvest.com/privacy,Indexable,"index, follow",27,54,Y,172,16/5,
+https://familyvest.com/terms,legal,200,https://familyvest.com/terms,Indexable,"index, follow",25,45,Y,160,16/6,
+https://familyvest.com/thank-you,utility,200,https://familyvest.com/thank-you,Non-Indexable,"noindex, follow",22,36,Y,30,1/2,intentionally non-index utility page

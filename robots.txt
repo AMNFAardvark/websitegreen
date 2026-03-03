@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /portal-redirect.php
+Disallow: /form-handler.php
+Disallow: /thank-you
+
+Sitemap: https://familyvest.com/sitemap.xml

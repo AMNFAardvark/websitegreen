@@ -1,0 +1,132 @@
+{
+  "mobile": {
+    "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/",
+    "performance_score": 69,
+    "metrics": {
+      "first_contentful_paint": "4.6\u00a0s",
+      "largest_contentful_paint": "4.8\u00a0s",
+      "cumulative_layout_shift": "0",
+      "total_blocking_time": "0\u00a0ms",
+      "speed_index": "5.5\u00a0s",
+      "server_response_time": "Root document took 60\u00a0ms",
+      "total_byte_weight": "Total size was 7,006\u00a0KiB"
+    },
+    "top_transfer_requests": [
+      {
+        "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/destin-flyover.mp4",
+        "resource_type": "Media",
+        "transfer_size_bytes": 6697343
+      },
+      {
+        "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/",
+        "resource_type": "Document",
+        "transfer_size_bytes": 219058
+      },
+      {
+        "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/familyvest-logo.png",
+        "resource_type": "Image",
+        "transfer_size_bytes": 141205
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSqn7B6D.woff2",
+        "resource_type": "Font",
+        "transfer_size_bytes": 39336
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2",
+        "resource_type": "Font",
+        "transfer_size_bytes": 37808
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+        "resource_type": "Font",
+        "transfer_size_bytes": 37012
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap",
+        "resource_type": "Stylesheet",
+        "transfer_size_bytes": 1550
+      },
+      {
+        "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/favicon.ico",
+        "resource_type": "Other",
+        "transfer_size_bytes": 902
+      },
+      {
+        "url": "https://vercel.live/_next-live/feedback/feedback.js",
+        "resource_type": "Script",
+        "transfer_size_bytes": 157
+      },
+      {
+        "url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAAAAAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf\u2026",
+        "resource_type": "Image",
+        "transfer_size_bytes": 0
+      }
+    ]
+  },
+  "desktop": {
+    "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/",
+    "performance_score": 88,
+    "metrics": {
+      "first_contentful_paint": "1.4\u00a0s",
+      "largest_contentful_paint": "1.7\u00a0s",
+      "cumulative_layout_shift": "0",
+      "total_blocking_time": "0\u00a0ms",
+      "speed_index": "1.4\u00a0s",
+      "server_response_time": "Root document took 50\u00a0ms",
+      "total_byte_weight": "Total size was 15,343\u00a0KiB"
+    },
+    "top_transfer_requests": [
+      {
+        "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/destin-flyover.mp4",
+        "resource_type": "Media",
+        "transfer_size_bytes": 15179220
+      },
+      {
+        "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/",
+        "resource_type": "Document",
+        "transfer_size_bytes": 219415
+      },
+      {
+        "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/familyvest-logo.png",
+        "resource_type": "Image",
+        "transfer_size_bytes": 141196
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSqn7B6D.woff2",
+        "resource_type": "Font",
+        "transfer_size_bytes": 39336
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2",
+        "resource_type": "Font",
+        "transfer_size_bytes": 37808
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+        "resource_type": "Font",
+        "transfer_size_bytes": 37012
+      },
+      {
+        "url": "https://vercel.live/_next-live/feedback/feedback.html?dpl=dpl_Dfx4QtRDaK2oXUnD8J6PHW6XGqu3",
+        "resource_type": "Document",
+        "transfer_size_bytes": 30732
+      },
+      {
+        "url": "https://vercel.live/_next-live/feedback/feedback.js",
+        "resource_type": "Script",
+        "transfer_size_bytes": 23319
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap",
+        "resource_type": "Stylesheet",
+        "transfer_size_bytes": 1559
+      },
+      {
+        "url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app/favicon.ico",
+        "resource_type": "Other",
+        "transfer_size_bytes": 880
+      }
+    ]
+  }
+}

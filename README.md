@@ -2,7 +2,7 @@
 
 ## Overview
 
-Static HTML website for FamilyVest at Farther. 12 self-contained pages with inline CSS, base64 assets, and embedded fonts. Designed for Vercel deployment.
+Static HTML website for FamilyVest at Farther. Core marketing templates plus legal/compliance and utility pages. Designed for Vercel preview deployment and InMotion production deployment.
 
 **Live preview:** Deploy via `bash deploy.sh` or `npx vercel --yes`
 **Production:** `npx vercel --prod --yes`
@@ -25,6 +25,13 @@ Static HTML website for FamilyVest at Farther. 12 self-contained pages with inli
 | Login | `login.html` | Client portal login page |
 | Get Started | `get-started.html` | Onboarding/scheduling page |
 | Autism Navigator | `autism-resource-navigator.html` | Interactive special needs resource tool |
+| Privacy | `privacy.html` | Privacy policy |
+| Terms | `terms.html` | Terms of use |
+| Disclosures | `disclosures.html` | Regulatory disclosures |
+| ADV | `adv.html` | ADV request information |
+| Forgot Password | `forgot-password.html` | Password-reset routing page |
+| Thank You | `thank-you.html` | Post-form submission confirmation |
+| 404 | `404.html` | Custom not-found page |
 
 ---
 
@@ -82,6 +89,11 @@ cd ~/Desktop/FamilyVest/familyvest-site-FIXED && npx vercel --yes
 cd ~/Desktop/FamilyVest/familyvest-site-FIXED && npx vercel --prod --yes
 ```
 
+### InMotion deploy
+- Upload repo root files to InMotion document root.
+- Keep `.htaccess`, `robots.txt`, `sitemap.xml`, `form-handler.php`, and `portal-redirect.php` in place.
+- Follow [INMOTION_DEPLOY_RUNBOOK.md](INMOTION_DEPLOY_RUNBOOK.md) for cutover and validation steps.
+
 ---
 
 ## QA Checklist
@@ -110,13 +122,14 @@ cd ~/Desktop/FamilyVest/familyvest-site-FIXED && npx vercel --prod --yes
 ### Known Items / Future Work
 
 - [ ] SEO meta tags: Some pages may need unique OG images
-- [ ] Form submission: Contact form needs backend (currently no action)
+- [x] Form submission: Contact/Get Started/Login now wired to server-side endpoints (`form-handler.php`, `portal-redirect.php`)
 - [ ] Video optimization: `destin-flyover.mp4` is 29MB, consider compression or streaming
 - [ ] Image optimization: Base64 logos add ~34KB per page. Consider external image hosting post-launch
 - [ ] Accessibility: ARIA labels, focus management, skip links present but need audit
 - [ ] Analytics: `gtag` and `dataLayer` event tracking stubs present, need GA4 property ID
-- [ ] Cloudflare email: `email-decode.min.js` script references may 404 on Vercel (Cloudflare-specific)
-- [ ] Privacy/Terms/Disclosures/ADV pages: Footer links to `/privacy`, `/terms`, `/disclosures`, `/adv` — pages not yet created
+- [x] Cloudflare email dependency removed from `get-started.html` (uses direct `mailto:`)
+- [x] Privacy/Terms/Disclosures/ADV pages created and linked
+- [ ] Set `FAMILYVEST_LEADS_EMAIL` server env var in InMotion for production form routing
 
 ---
 
@@ -136,6 +149,20 @@ contact.html                  — Contact with map
 login.html                    — Client login
 get-started.html              — Get started/scheduling
 autism-resource-navigator.html — Autism resource tool
+privacy.html                  — Privacy policy
+terms.html                    — Terms of use
+disclosures.html              — Regulatory disclosures
+adv.html                      — ADV request page
+forgot-password.html          — Password reset helper
+thank-you.html                — Post-form confirmation
+404.html                      — Custom not-found page
+form-handler.php              — Contact/Get Started form backend (PHP)
+portal-redirect.php           — Login redirect endpoint to Farther portal
+robots.txt                    — Crawl directives
+sitemap.xml                   — XML sitemap
+.htaccess                     — InMotion rewrite/redirect config
+redirect-map-template.csv     — Launch redirect mapping worksheet
+QA-STAGING-ACCESS.md          — Steps to disable Vercel QA protection
 destin-flyover.mp4            — Homepage hero video (29MB)
 familyvest-logo.png           — Full logo image
 familyvest-logo-nav.png       — Nav-sized logo

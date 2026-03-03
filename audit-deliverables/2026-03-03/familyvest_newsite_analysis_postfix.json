@@ -1,0 +1,65 @@
+{
+  "preview_url": "https://familyvest-site-8mm8crchq-amnfaardvarks-projects.vercel.app",
+  "summary": {
+    "total_html_pages": 19,
+    "forms_total": 3,
+    "forms_missing_action": 0,
+    "broken_internal_links": 0,
+    "broken_internal_unique": [],
+    "missing_robots_meta": 0,
+    "missing_canonical": 0,
+    "canonical_og_url_mismatches": 0,
+    "placeholder_hash_links": 0,
+    "http_links": 0,
+    "duplicate_titles": 0,
+    "missing_meta_descriptions": 0,
+    "missing_h1": 0,
+    "non_200_pages": []
+  },
+  "forms": [
+    {
+      "page": "contact.html",
+      "id": "contactForm",
+      "action": "/form-handler.php",
+      "method": "post",
+      "has_action": true
+    },
+    {
+      "page": "get-started.html",
+      "id": "gsForm",
+      "action": "/form-handler.php",
+      "method": "post",
+      "has_action": true
+    },
+    {
+      "page": "login.html",
+      "id": "loginForm",
+      "action": "/portal-redirect.php",
+      "method": "post",
+      "has_action": true
+    }
+  ],
+  "broken": [],
+  "canonical_og_mismatches": [],
+  "status_map_preview": {
+    "https://familyvest.com/": 200,
+    "https://familyvest.com/404": 200,
+    "https://familyvest.com/about": 200,
+    "https://familyvest.com/adv": 200,
+    "https://familyvest.com/autism-resource-navigator": 200,
+    "https://familyvest.com/blog": 200,
+    "https://familyvest.com/contact": 200,
+    "https://familyvest.com/disclosures": 200,
+    "https://familyvest.com/forgot-password": 200,
+    "https://familyvest.com/get-started": 200,
+    "https://familyvest.com/investment-management": 200,
+    "https://familyvest.com/login": 200,
+    "https://familyvest.com/planning": 200,
+    "https://familyvest.com/planning-business-exits": 200,
+    "https://familyvest.com/planning-retirement": 200,
+    "https://familyvest.com/planning-special-needs": 200,
+    "https://familyvest.com/privacy": 200,
+    "https://familyvest.com/terms": 200,
+    "https://familyvest.com/thank-you": 200
+  }
+}
