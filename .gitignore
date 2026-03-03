@@ -1,0 +1,12 @@
+# Vercel
+.vercel/
+
+# QA/internal files
+_qa-preview.html
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Legacy reference
+wordpress-files/

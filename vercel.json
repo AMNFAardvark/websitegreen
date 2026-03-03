@@ -1,0 +1,18 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/planning/retirement", "destination": "/planning-retirement.html" },
+    { "source": "/planning/special-needs", "destination": "/planning-special-needs.html" },
+    { "source": "/planning/business-exits", "destination": "/planning-business-exits.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ]
+}
