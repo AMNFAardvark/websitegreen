@@ -192,3 +192,4 @@ wordpress-files/              — Legacy WordPress reference
 7. **siteNav/mainNav mismatch** — JS referenced `getElementById('siteNav')` but nav had `id="mainNav"`. Removed broken scripts.
 8. **Logo not rendering** — Embedded new FamilyVest at Farther logo as base64 in all 12 pages.
 9. **Video missing** — Copied `Destin_30A_Trees.mp4` as `destin-flyover.mp4` to site folder.
+# websitegreen
