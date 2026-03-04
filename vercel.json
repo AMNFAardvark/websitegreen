@@ -2,19 +2,47 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/autism-resources", "destination": "/autism-resource-navigator.html" },
-    { "source": "/planning/retirement", "destination": "/planning-retirement.html" },
-    { "source": "/planning/special-needs", "destination": "/planning-special-needs.html" },
-    { "source": "/planning/business-exits", "destination": "/planning-business-exits.html" }
+    {
+      "source": "/autism-resources",
+      "destination": "/autism-resource-navigator.html"
+    },
+    {
+      "source": "/planning/retirement",
+      "destination": "/planning-retirement.html"
+    },
+    {
+      "source": "/planning/special-needs",
+      "destination": "/planning-special-needs.html"
+    },
+    {
+      "source": "/planning/business-exits",
+      "destination": "/planning-business-exits.html"
+    },
+    {
+      "source": "/veterans",
+      "destination": "/veterans.html"
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=()"
+        }
       ]
     }
   ]

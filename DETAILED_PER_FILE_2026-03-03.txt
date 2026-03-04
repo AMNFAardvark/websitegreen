@@ -1,0 +1,394 @@
+================================================================================
+DETAILED PER-FILE BREAKDOWN
+================================================================================
+
+FILE: 404.html
+Status: NEEDS WORK (Minor - Utility Page)
+Issue: Missing hero section
+Title: Page Not Found | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✗ None
+Content Sections: 0
+CTA Buttons: 2 (both functional)
+  - / (home link)
+  - /get-started
+Images: 1
+Placeholder Text: None
+Assessment: This is an error page. Hero not required. Structure is fine.
+
+---
+
+FILE: about.html
+Status: LOOKS GOOD
+Title: About | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes
+Content Sections: 1 (135 chars - OK)
+CTA Buttons: 2 (both functional)
+  - /get-started
+  - /get-started
+Images: 6
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+Assessment: Solid page. Content is present, CTAs work, no issues.
+
+---
+
+FILE: adv.html
+Status: LOOKS GOOD
+Title: ADV Part 2 | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes
+Content Sections: 1 (1,837 chars - substantial)
+CTA Buttons: 2 (both functional)
+  - /contact
+  - /get-started
+Images: 1
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+Assessment: Good content depth. Professional compliance page.
+
+---
+
+FILE: autism-resource-navigator.html
+Status: NEEDS WORK (Critical)
+Title: Special Needs Resource Navigator | Autism & Disability Services Across 50 States | FamilyVest
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✗ None
+Content Sections: 4 (one is only 20 chars - stub)
+CTA Buttons: 31 (INTERACTIVE TOOL - most are JS functions)
+  - toggleSidebar()
+  - applyProfile()
+  - printBenefitsPanel()
+  - [and 28 more JS function calls]
+Images: 2
+Placeholder Text: ✗ "coming soon" found
+CSS: ✓ Using CSS variables
+CRITICAL ISSUE #1: This appears to be an INTERACTIVE TOOL (like a calculator/navigator)
+                   not a traditional landing page. The JavaScript CTAs are likely
+                   intentional for filtering/printing functionality.
+CRITICAL ISSUE #2: "coming soon" text indicates incomplete status
+ACTION: Clarify with Todd - is this tool complete? If yes, remove "coming soon".
+        If no, either complete it or remove from site.
+Assessment: Functionality unclear. Needs clarification. Potentially powerful tool
+            if complete, but "coming soon" suggests it's not ready for public use.
+
+---
+
+FILE: blog.html
+Status: NEEDS WORK (Critical)
+Title: Blog & Resources | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes (156 chars)
+Content Sections: 4 (all populated)
+  - hero: 156 chars
+  - filters: 97 chars (OK)
+  - featured: 411 chars (OK)
+  - postsGrid: 2,097 chars (OK)
+CTA Buttons: 11 total
+  ✓ Functional: 3
+  ✗ Broken (empty href=""): 3
+  ✓ Other: 5
+Images: 1
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+CRITICAL ISSUE: 3 CTA buttons have empty href attributes
+                These are likely in blog post card templates where the URL
+                should have been populated but wasn't.
+ACTION: Add real URLs for blog post CTAs. Each blog card needs a link.
+        Possibly: /blog/post-title or similar structure.
+Assessment: Template issue. Blog structure is good, just missing links.
+            This looks like a copy-paste error in the template markup.
+
+---
+
+FILE: contact.html
+Status: NEEDS WORK (Minor - Utility Page)
+Issue: Missing hero section
+Title: Contact | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✗ None
+Content Sections: 0
+CTA Buttons: 2 (both functional)
+  - /get-started
+  - /get-started
+Images: 1
+Placeholder Text: None
+Assessment: This is a contact form page. Hero not strictly required. Structure fine.
+
+---
+
+FILE: disclosures.html
+Status: LOOKS GOOD
+Title: Disclosures | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes
+Content Sections: 0 (utility page)
+CTA Buttons: 1 (functional)
+  - /get-started
+Images: 1
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+Assessment: Proper legal/compliance page structure.
+
+---
+
+FILE: forgot-password.html
+Status: NEEDS WORK (Minor - Utility Page)
+Issue: Missing hero section
+Title: Reset Your Password | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✗ None
+Content Sections: 0
+CTA Buttons: 2 (both functional)
+  - https://app.farther.com (external - good)
+  - /get-started
+Images: 1
+Placeholder Text: None
+Assessment: This is a utility page for password reset. Hero not required.
+            Structure is appropriate.
+
+---
+
+FILE: get-started.html
+Status: NEEDS WORK (Critical)
+Title: Get Started | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes (171 chars)
+Content Sections: 2
+  - hero: 171 chars
+  - contact: 1,199 chars
+CTA Buttons: 5 total
+  ✓ Functional: 2
+    - #contact (anchor link - OK)
+    - /contact (internal)
+  ✗ Broken (empty): 3
+Images: 7
+Placeholder Text: ✗ "coming soon" found
+CSS: ✓ Using CSS variables
+CRITICAL ISSUE #1: "coming soon" text visible on page - suggests incompleteness
+CRITICAL ISSUE #2: 3 CTA buttons with empty href attributes
+ACTION: Remove "coming soon" text and populate the 3 empty CTAs with real URLs
+        Likely should link to: /contact, /login, /planning, or similar
+Assessment: This page has good structure but feels unfinished. The "coming soon"
+            text and broken CTAs suggest it was created as a placeholder.
+            Either complete it or redirect traffic elsewhere.
+
+---
+
+FILE: index.html (Homepage)
+Status: NEEDS WORK (High Priority)
+Title: FamilyVest | Wealth Management & Financial Planning | Destin, FL
+Metadata: ✓ Viewport present | ✓ Page title good (SEO-friendly)
+Hero Section: ✓ Yes (324 chars)
+Content Sections: 7 total
+  ✓ hero: 324 chars (OK)
+  ✗ merger-band: 11 chars (EMPTY)
+  ✗ (no ID): 14 chars (EMPTY)
+  ✗ (no ID): 14 chars (EMPTY)
+  ✗ (no ID): 18 chars (EMPTY)
+  (Additional sections not fully detailed)
+  ✓ who: 1,001 chars (OK)
+CTA Buttons: 5 (all functional)
+  - /get-started
+  - #who (anchor link - OK)
+  - tel:8446283185 (phone link)
+  - (and 2 more functional)
+Images: 1
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+HIGH PRIORITY ISSUE: 5 empty/stub sections creating visual gaps
+ACTION: Review homepage layout. Likely these sections are:
+  1. Visual dividers/spacing (can be done with CSS, not HTML sections)
+  2. Planned content not yet populated
+  Either populate with content or remove the unnecessary markup.
+Assessment: Homepage has good structure and hero, but the empty sections
+            create gaps. This feels like sections were set up but never filled in.
+            Either complete the layout or simplify.
+
+---
+
+FILE: investment-management.html
+Status: LOOKS GOOD
+Title: Investment Management | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes
+Content Sections: 4 (all populated)
+  - 684 chars (OK)
+  - 508 chars (OK)
+  - 267 chars (OK)
+  - 182 chars (OK)
+CTA Buttons: 5 (all functional)
+  - tel:8446283185
+  - /get-started
+  - [and 3 more]
+Images: 2
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+Assessment: Solid service page. Good content depth, all CTAs functional.
+
+---
+
+FILE: login.html
+Status: NEEDS WORK (Medium Priority)
+Issue: Missing hero + 1 broken CTA
+Title: Login | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✗ None
+Content Sections: 0
+CTA Buttons: 3 total
+  ✗ Broken (empty): 1
+  ✓ Functional: 2
+    - https://app.farther.com
+    - /get-started
+Images: 1
+Placeholder Text: None
+Assessment: Login form page. Hero not required (utility page).
+            But the 1 broken CTA should be fixed.
+ACTION: Populate the empty href in the one broken CTA.
+
+---
+
+FILE: planning-business-exits.html
+Status: LOOKS GOOD
+Title: Business Exit Planning | CEPA + CFA Advisor | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title EXCELLENT (keyword-rich SEO)
+Hero Section: ✓ Yes
+Content Sections: 7 (all populated)
+  - 299 chars (OK)
+  - 959 chars (OK)
+  - 1,478 chars (GOOD)
+  - 798 chars (OK)
+  - 632 chars (OK)
+  - [2 more well-populated]
+CTA Buttons: 5 (all functional)
+Images: 1
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+Assessment: Excellent niche service page. Good content, title includes relevant
+            keywords (CEPA + CFA Advisor), all CTAs functional.
+            This is a model page for other service pages.
+
+---
+
+FILE: planning-retirement.html
+Status: LOOKS GOOD
+Title: Retirement Planning | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes
+Content Sections: 6 (all populated)
+  - 493 chars (OK)
+  - 761 chars (OK)
+  - 1,318 chars (GOOD)
+  - 541 chars (OK)
+  - 122 chars (OK)
+  - [1 more well-populated]
+CTA Buttons: 5 (all functional)
+Images: 2
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+Assessment: Good service page. Solid content, all CTAs work.
+
+---
+
+FILE: planning-special-needs.html
+Status: NEEDS WORK (High Priority)
+Title: Special Needs Planning | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes
+Content Sections: 9 total
+  ✓ 89 chars (OK)
+  ✗ 48 chars (EMPTY - stub)
+  ✗ 46 chars (EMPTY - stub)
+  ✓ 294 chars (OK)
+  ✓ 482 chars (OK)
+  [and 4 more sections]
+CTA Buttons: 6 (all functional)
+  - tel:8446283185
+  - /get-started
+  - /autism-resource-navigator (link to tool)
+  - [3 more]
+Images: 1
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+HIGH PRIORITY ISSUE: 2 stub/empty sections out of 9
+ACTION: Populate the 2 empty sections with real content or remove them.
+Assessment: This is a key service page (special needs planning).
+            The empty sections should be filled with valuable content
+            or consolidated. Links to autism-resource-navigator are good.
+
+---
+
+FILE: planning.html
+Status: NEEDS WORK (High Priority)
+Title: Financial Planning | Comprehensive Wealth Planning | FamilyVest
+Metadata: ✓ Viewport present | ✓ Page title good (SEO-friendly)
+Hero Section: ✓ Yes
+Content Sections: 13 total
+  ✗ 22 chars (EMPTY - stub)
+  ✗ 11 chars (EMPTY - stub)
+  ✗ 14 chars (EMPTY - stub)
+  ✗ 24 chars (EMPTY - stub)
+  ✗ 34 chars (EMPTY - stub)
+  [and 8 more sections - some OK, some empty]
+CTA Buttons: 3 (all functional)
+Images: 3
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+CRITICAL ISSUE: 7 empty/stub sections out of 13 total (54% empty!)
+ACTION: This page needs significant cleanup. Either:
+  a) Populate all sections with real planning service content
+  b) Remove unnecessary sections and consolidate structure
+  c) Review page purpose - is it meant to be a hub, or does each
+     planning type (retirement, special needs, etc.) have dedicated pages?
+Assessment: This page feels like a placeholder container. Most sections
+            are barely stubs. It needs either serious content work or
+            structural redesign. Consider whether consolidation with
+            planning-retirement.html and planning-special-needs.html
+            makes sense, or if this should be a hub that links to those.
+
+---
+
+FILE: privacy.html
+Status: LOOKS GOOD
+Title: Privacy Policy | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes
+Content Sections: 0 (utility page)
+CTA Buttons: 1 (functional)
+Images: 1
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+Assessment: Proper legal page.
+
+---
+
+FILE: terms.html
+Status: LOOKS GOOD
+Title: Terms of Use | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✓ Yes
+Content Sections: 1 (3,140 chars - substantial legal content)
+CTA Buttons: 1 (functional)
+Images: 1
+Placeholder Text: None
+CSS: ✓ Using CSS variables
+Assessment: Proper legal page with good content depth.
+
+---
+
+FILE: thank-you.html
+Status: NEEDS WORK (Minor - Utility Page)
+Issue: Missing hero section
+Title: Thank You | FamilyVest at Farther
+Metadata: ✓ Viewport present | ✓ Page title good
+Hero Section: ✗ None
+Content Sections: 0
+CTA Buttons: 2 (both functional)
+  - / (home)
+  - /get-started
+Images: 1
+Placeholder Text: None
+Assessment: Post-form thank you page. Hero not required. Structure is fine.
+
+================================================================================

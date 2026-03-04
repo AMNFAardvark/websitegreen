@@ -36,7 +36,7 @@
  --gray-600: #6b7280;
  --gray-700: #374151;
  --content-max: 1200px;
- --content-narrow: 720px;;--sand:#d4c5a0;--sand-dark:#b8a67a;--white:#ffffff}
+ --content-narrow: 720px;;--sand:#f5f3ef;--sand-dark:#EEEEEE;--white:#ffffff}
 
 /* === STANDARDIZED NAV === */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 clamp(1rem,3vw,2.5rem);height:72px;display:flex;align-items:center;justify-content:space-between;transition:transform 0.4s ease,background 0.3s ease;background:transparent}
@@ -96,9 +96,9 @@
 
 :root {
  --navy-deep:#0A1628;--navy:#0F2140;--navy-mid:#162D54;--navy-light:#1C3A6E;
- --accent:#21A0DB;--accent-light:#D4B96A;--accent-muted:rgba(33,160,219,0.15);
- --sand:#F5F0E8;--sand-dark:#E8E0D0;--white:#FFF;--off-white:#FAFAF8;
- --navy-mid:#2D2D2D;--gray-600:#4A4A4A;--gray-500:#666;--gray-400:#999;--gray-300:#BBB;
+ --accent:#21A0DB;--accent-light:#4BB8E8;--accent-muted:rgba(33,160,219,0.15);
+ --sand:#f5f3ef;--sand-dark:#EEEEEE;--white:#FFF;--off-white:#FAFAF8;
+ --gray-600:#4A4A4A;--gray-400:#999;
  --accent-cyan:#2BAAE2;--gray-500:#808A94;
  --font-display:'Cormorant Garamond',Georgia,serif;
  --font-body:'DM Sans',system-ui,-apple-system,sans-serif;
@@ -174,10 +174,10 @@ body{font-family:var(--font-body);color:var(--navy-mid);background:var(--white);
 .post-cat{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:.4rem;display:inline-block}
 .post-cat--retirement{color:#2BAAE2}
 .post-cat--planning{color:var(--accent)}
-.post-cat--tax{color:#6B8F71}
-.post-cat--family{color:#C97B84}
-.post-cat--business{color:#8B7EC8}
-.post-cat--special{color:#E89B4B}
+.post-cat--tax{color:#005175}
+.post-cat--family{color:#4BB8E8}
+.post-cat--business{color:#005175}
+.post-cat--special{color:#21A0DB}
 .post-body h4{font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--navy-deep);line-height:1.3;margin-bottom:.5rem}
 .post-body h4 a{color:inherit;text-decoration:none;transition:color .2s}
 .post-body h4 a:hover{color:var(--accent)}
@@ -290,24 +290,18 @@ body{font-family:var(--font-body);color:var(--navy-mid);background:var(--white);
  <ul class="nav-links" id="navLinks">
  <li><a href="/about">About</a></li>
  <li class="nav-dropdown">
- <a href="#" aria-haspopup="true">Who We Serve &#9662;</a>
+ <a href="#" aria-haspopup="true">Who We Help &#9662;</a>
  <div class="nav-dropdown-menu">
  <a href="/planning">Families</a>
- <a href="/planning-retirement">Retirees</a>
- <a href="/planning-special-needs">Special Needs Families</a>
+ <a href="/planning-special-needs">Families with Special Needs</a>
+ <a href="/planning-retirement">Pre/Post Retirement</a>
+ <a href="/veterans">Veterans</a>
  <a href="/planning-business-exits">Business Owners</a>
  </div>
  </li>
- <li class="nav-dropdown">
- <a href="#" aria-haspopup="true">Services &#9662;</a>
- <div class="nav-dropdown-menu">
- <a href="/planning">Financial Planning</a>
- <a href="/investment-management">Investment Management</a>
- <a href="/planning-special-needs">Special Needs Planning</a>
- </div>
- </li>
- <li><a href="/blog">Blog</a></li>
- <li><a href="/login">Client Login</a></li>
+ <li><a href="/investment-management">Investments</a></li>
+ <li><a href="/blog">Blog &amp; Resources</a></li>
+ <li><a href="/contact">Contact</a></li>
  </ul>
  <div class="nav-cta"><a href="/get-started" data-track="nav-get-started">Get Started</a></div>
  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"></button>
@@ -463,7 +457,45 @@ body{font-family:var(--font-body);color:var(--navy-mid);background:var(--white);
  <button class="load-btn" id="loadMore">Load More Articles</button>
 </div>
 
-<!-- RESOURCES -->
+<!-- FEATURED RESOURCE: AUTISM RESOURCE NAVIGATOR -->
+<section class="navigator-feature" style="padding:4rem 2.5rem;background:linear-gradient(135deg,#0a1628 0%,#005175 100%);position:relative;overflow:hidden">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse 500px 300px at 20% 50%,rgba(33,160,219,0.08) 0%,transparent 100%)"></div>
+ <div style="max-width:960px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center" class="fade-in">
+ <div>
+ <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.14em;color:#4BB8E8;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem"><span style="width:30px;height:2px;background:#4BB8E8;display:inline-block"></span> Featured Resource</div>
+ <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:600;color:#fff;line-height:1.2;margin-bottom:1rem">Autism Resource Navigator</h2>
+ <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;line-height:1.75;margin-bottom:0.5rem">The most comprehensive autism resource directory available. 1,300+ vetted resources across all 50 states, covering therapies, schools, social programs, residential options, and financial planning tools.</p>
+ <p style="color:rgba(255,255,255,0.45);font-size:0.85rem;line-height:1.75;margin-bottom:1.5rem">Includes a Letter of Intent builder, provider search by location and age group, and connections to state-specific ABLE account programs. Free for every family.</p>
+ <div style="display:flex;gap:1rem;flex-wrap:wrap">
+ <a href="/autism-resource-navigator" style="background:#21A0DB;color:#0a1628;padding:0.75rem 1.8rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:background 0.25s,transform 0.2s;display:inline-block" onmouseover="this.style.background='#4BB8E8';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#21A0DB';this.style.transform='none'">Launch Navigator</a>
+ <a href="/planning-special-needs" style="border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.85);padding:0.75rem 1.8rem;border-radius:4px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:border-color 0.25s,color 0.25s;display:inline-block" onmouseover="this.style.borderColor='#21A0DB';this.style.color='#21A0DB'" onmouseout="this.style.borderColor='rgba(255,255,255,0.25)';this.style.color='rgba(255,255,255,0.85)'">Special Needs Planning</a>
+ </div>
+ </div>
+ <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:2rem">
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem">
+ <div style="text-align:center;padding:1rem">
+ <div style="font-family:var(--font-display);font-size:2rem;font-weight:600;color:#21A0DB">1,300+</div>
+ <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.3rem">Vetted Resources</div>
+ </div>
+ <div style="text-align:center;padding:1rem">
+ <div style="font-family:var(--font-display);font-size:2rem;font-weight:600;color:#21A0DB">50</div>
+ <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.3rem">States Covered</div>
+ </div>
+ <div style="text-align:center;padding:1rem">
+ <div style="font-family:var(--font-display);font-size:2rem;font-weight:600;color:#4BB8E8">6</div>
+ <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.3rem">Resource Categories</div>
+ </div>
+ <div style="text-align:center;padding:1rem">
+ <div style="font-family:var(--font-display);font-size:2rem;font-weight:600;color:#4BB8E8">Free</div>
+ <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.3rem">For Every Family</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <style>@media(max-width:768px){.navigator-feature>div:nth-child(2){grid-template-columns:1fr !important}}</style>
+</section>
+
+<!-- ADDITIONAL RESOURCES -->
 <section class="resources">
  <div class="resources-inner fade-in">
  <div class="resources-header">
@@ -472,21 +504,18 @@ body{font-family:var(--font-body);color:var(--navy-mid);background:var(--white);
  </div>
  <div class="resources-grid">
  <div class="resource-card">
- 
  <h4>The Real Value of Financial Advice</h4>
- <p>Our research summary of Vanguard, Morningstar, and Envestnet data on how coordinated advice adds measurable value.</p>
+ <p>Research from Vanguard, Morningstar, and Envestnet on how coordinated advice adds approximately 3% in annual value.</p>
  <a href="/contact" class="resource-link">Request Guide</a>
  </div>
  <div class="resource-card">
- 
- <h4>Autism Resource Navigator</h4>
- <p>1,300+ resources across all 50 states. Therapies, schools, providers, benefits, and an LOI builder&mdash;free for every family.</p>
- <a href="/autism-resource-navigator" class="resource-link">Launch Navigator</a>
+ <h4>Special Needs Planning Guide</h4>
+ <p>ABLE accounts, special needs trusts, Medicaid preservation, and SSI coordination. The framework families need.</p>
+ <a href="/planning-special-needs" class="resource-link">Learn More</a>
  </div>
  <div class="resource-card">
- 
  <h4>Retirement Readiness Checklist</h4>
- <p>The key questions to answer before you retire&mdash;Social Security timing, withdrawal sequencing, Medicare, and more.</p>
+ <p>Social Security timing, withdrawal sequencing, Medicare enrollment, and the key questions to answer before you retire.</p>
  <a href="/get-started" class="resource-link">Get the Checklist</a>
  </div>
  </div>
@@ -501,7 +530,7 @@ body{font-family:var(--font-body);color:var(--navy-mid);background:var(--white);
  <h2>Have a Question We Haven&rsquo;t Covered?</h2>
  <p>We&rsquo;re here to help you think through the decisions that matter most. No sales pitch. Just a conversation.</p>
  <div class="closing-ctas">
- <a href="tel:8446283185" class="btn-accent">Call Us &mdash; 844-628-3185</a>
+ <a href="/get-started" class="btn-accent">Schedule a Conversation</a>
  <a href="/contact" class="btn-ghost">Send a Message</a>
  </div>
  </div>
@@ -603,7 +632,7 @@ body{font-family:var(--font-body);color:var(--navy-mid);background:var(--white);
  var obs=new IntersectionObserver(function(entries){
  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})
  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
- document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el)});
+ document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el)});
  function trackEvent(name,data){
  if(typeof gtag==='function')gtag('event',name,data);
  if(typeof dataLayer!=='undefined')dataLayer.push(Object.assign({event:name},data))

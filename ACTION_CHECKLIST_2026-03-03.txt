@@ -1,0 +1,192 @@
+================================================================================
+ACTION CHECKLIST - FAMILYVEST WEBSITE AUDIT FIXES
+================================================================================
+Generated: March 3, 2026
+
+CRITICAL - FIX BEFORE LAUNCH
+================================================================================
+
+PHASE 1: blog.html (Est. 15 minutes)
+  [ ] Open: /sessions/adoring-compassionate-noether/mnt/FamilyVest/familyvest-site-FIXED/blog.html
+  [ ] Find: 3 <a> tags with class containing "button" and empty href=""
+  [ ] Fix: Add real blog post URLs to each CTA
+      Suggested pattern: /blog/post-slug or /resources/topic
+  [ ] Test: Click each CTA and verify it links to correct page
+  [ ] Verify: No remaining empty href="" values
+
+PHASE 2: get-started.html (Est. 30 minutes)
+  [ ] Open: /sessions/adoring-compassionate-noether/mnt/FamilyVest/familyvest-site-FIXED/get-started.html
+  [ ] Search for: "coming soon" text
+  [ ] Delete: Remove all "coming soon" placeholder text
+  [ ] Find: 3 CTA buttons with empty href=""
+  [ ] Fix: Populate href values (ask Todd where these should link)
+      Options: /contact, /login, /planning, /consultation
+  [ ] Test: Verify all CTAs now have working links
+  [ ] Verify: Page no longer contains placeholder text
+
+PHASE 3: autism-resource-navigator.html (Est. Time TBD)
+  [ ] HOLD: Ask Todd first - Is this a functional tool or incomplete page?
+  [ ] IF tool: Keep JS CTAs, remove "coming soon" text, add hero section
+  [ ] IF incomplete: Either complete the page or remove from navigation
+  [ ] Search for: "coming soon" text
+  [ ] Delete: Remove "coming soon" if tool is complete/intentional
+  [ ] Add: Consider adding a proper hero section
+  [ ] Clarify: Document intended use case for future reference
+
+================================================================================
+HIGH PRIORITY - FIX THIS SPRINT
+================================================================================
+
+PHASE 4: index.html Homepage (Est. 1-2 hours)
+  [ ] Open: /sessions/adoring-compassionate-noether/mnt/FamilyVest/familyvest-site-FIXED/index.html
+  [ ] Identify: 5 empty sections with < 50 characters
+      Sections: merger-band (11), 3 unnamed sections (14, 14, 18 chars)
+  [ ] REVIEW: Are these:
+      [ ] Intentional whitespace dividers? (can use CSS instead of HTML sections)
+      [ ] Placeholders for future content?
+      [ ] Structural errors?
+  [ ] ACTION:
+      [ ] If whitespace: Remove sections, use CSS margin/padding instead
+      [ ] If placeholders: Populate with real content
+      [ ] If errors: Consolidate with adjacent sections
+  [ ] Test: Homepage loads with no visual gaps or excess whitespace
+  [ ] Verify: No empty sections remain
+
+PHASE 5: planning.html (Est. 2-4 hours OR Design Review)
+  [ ] REVIEW FIRST: Ask Todd - what is purpose of this page?
+      - Hub page linking to planning-retirement.html, planning-business-exits.html, etc.?
+      - Standalone service page with its own content?
+      - Template that needs completion?
+  [ ] Open: /sessions/adoring-compassionate-noether/mnt/FamilyVest/familyvest-site-FIXED/planning.html
+  [ ] Count: 7 empty sections out of 13 (54% of page)
+  [ ] IF hub page:
+      [ ] Keep structure, but populate sections with descriptions and links
+      [ ] Example: "Retirement Planning" section -> description + link to planning-retirement.html
+  [ ] IF standalone:
+      [ ] Add comprehensive planning service content
+      [ ] Match structure to planning-retirement.html and planning-business-exits.html
+  [ ] IF remove:
+      [ ] Delete or consolidate with other pages
+      [ ] Update navigation to remove link
+  [ ] Test: Page content matches its intended purpose
+  [ ] Verify: No placeholder or empty sections remain
+
+PHASE 6: planning-special-needs.html (Est. 1-2 hours)
+  [ ] Open: /sessions/adoring-compassionate-noether/mnt/FamilyVest/familyvest-site-FIXED/planning-special-needs.html
+  [ ] Find: 2 empty sections (46-48 characters each)
+  [ ] Identify: Which sections are empty?
+  [ ] Fix options:
+      [ ] Populate with special needs planning content
+      [ ] Merge with adjacent sections
+      [ ] Link to autism-resource-navigator tool
+  [ ] Test: Page has good content flow without empty gaps
+  [ ] Verify: All sections contain meaningful content
+
+================================================================================
+MEDIUM PRIORITY - BEFORE FINAL REVIEW
+================================================================================
+
+PHASE 7: login.html (Est. 15 minutes)
+  [ ] Open: /sessions/adoring-compassionate-noether/mnt/FamilyVest/familyvest-site-FIXED/login.html
+  [ ] Find: 1 CTA button with empty href=""
+  [ ] Fix: Add proper href value (likely: https://app.farther.com or /dashboard)
+  [ ] Test: CTA button now links correctly
+
+================================================================================
+OPTIONAL - POLISH (POST-LAUNCH)
+================================================================================
+
+PHASE 8: Utility Pages - Consider Hero Consistency (Optional)
+  Pages without hero sections (acceptable for utility pages):
+  [ ] 404.html - Error page (hero optional)
+  [ ] contact.html - Contact form (hero optional)
+  [ ] forgot-password.html - Password reset (hero optional)
+  [ ] thank-you.html - Post-form confirmation (hero optional)
+
+  Decision: Does Todd want hero sections on all pages for brand consistency?
+  [ ] If YES: Add hero sections to utility pages
+  [ ] If NO: Keep as-is (they're fine without)
+
+================================================================================
+VERIFICATION CHECKLIST
+================================================================================
+
+After all fixes, verify:
+
+CRITICAL:
+  [ ] blog.html: All 3 CTAs have working href links
+  [ ] get-started.html: No "coming soon" text, all 3 CTAs functional
+  [ ] autism-navigator: Intent clarified, "coming soon" removed (if intentional)
+
+HIGH:
+  [ ] index.html: No empty sections, good visual layout
+  [ ] planning.html: Clear purpose, either content-complete or proper hub
+  [ ] planning-special-needs.html: No empty sections
+
+MEDIUM:
+  [ ] login.html: 1 broken CTA fixed
+
+OVERALL:
+  [ ] No broken CTA links on any page (test all)
+  [ ] No "coming soon" or placeholder text (search entire site)
+  [ ] No empty sections (review all pages visually)
+  [ ] All pages mobile-responsive (check on phone)
+  [ ] All images load correctly
+  [ ] CSS colors consistent (review planning-business-exits.html as template)
+  [ ] Page titles descriptive and SEO-friendly
+
+================================================================================
+TESTING PROTOCOL
+================================================================================
+
+For each fixed page:
+  1. Open in Chrome/Firefox
+  2. Check mobile view (DevTools > responsive mode)
+  3. Click every CTA button - verify destination
+  4. Search for: "coming soon", "TODO", "TBD", "Lorem ipsum", "[placeholder]"
+  5. Review visual layout - no obvious gaps or stubs
+  6. Check images load (network tab, no red icons)
+  7. Verify page title in browser tab
+  8. Test anchor links (if any)
+
+================================================================================
+FILES TO REFERENCE
+================================================================================
+
+Audit Report:      AUDIT_REPORT_2026-03-03.txt
+Detailed Analysis: DETAILED_PER_FILE_2026-03-03.txt
+Executive Summary: EXECUTIVE_SUMMARY_2026-03-03.txt
+This Checklist:    ACTION_CHECKLIST_2026-03-03.txt
+
+All located in: /sessions/adoring-compassionate-noether/mnt/FamilyVest/familyvest-site-FIXED/
+
+Model Page (reference for good structure):
+  planning-business-exits.html - use as template for other service pages
+
+================================================================================
+ESTIMATED TOTAL TIME
+================================================================================
+
+Critical Fixes:        45 minutes (blog + get-started immediate fixes)
+High Priority:         4-6 hours (depends on clarifications from Todd)
+Medium Priority:       15 minutes (login.html)
+Optional:              2-3 hours (utility page heroes)
+
+TOTAL (without optional): 5-7 hours
+TOTAL (with optional):    7-10 hours
+
+Critical path: Ask Todd clarification questions on planning.html and autism-navigator
+while fixing blog/get-started in parallel.
+
+================================================================================
+CONTACTS / QUESTIONS FOR TODD
+================================================================================
+
+1. autism-resource-navigator.html: Tool or incomplete page?
+2. planning.html: Hub, standalone, or remove?
+3. get-started.html: Where should 3 CTAs link to?
+4. Utility pages: Add hero sections for consistency? (Optional)
+
+================================================================================
+END OF CHECKLIST
+================================================================================

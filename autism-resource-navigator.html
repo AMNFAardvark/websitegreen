@@ -108,7 +108,7 @@
 
 :root{--primary:#29ABE2;--primary-light:#e6f5fb;--primary-dark:#1a8bbf;--primary-deeper:#14709a;--brand-gray:#6E6E6E;--brand-dark:#2D2D2D;--text:#1d1d1f;--text-muted:#86868b;--bg:#f5f5f7;--card-bg:#fff;--border:#d2d2d7;--border-light:#e8e8ed;--danger:#c0392b;--success:#27ae60;--warning:#e67e22;--radius:12px;--shadow:0 1px 3px rgba(0,0,0,.04);--shadow-md:0 4px 12px rgba(0,0,0,.08);--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.5;font-size:15px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.app-header{background:rgba(29,29,31,.97);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(255,255,255,.08);padding:12px 24px;position:sticky;top:0;z-index:100}
+.app-header{background:var(--navy, #0a1628);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(255,255,255,.08);padding:12px 24px;position:sticky;top:0;z-index:100}
 .header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand-logo-img{height:54px;width:auto;max-width:280px;display:block}
@@ -304,6 +304,36 @@
 .filter-chip.active{background:var(--primary);color:#fff;border-color:var(--primary)}
 .telehealth-badge{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;background:#e8f5e9;color:#2e7d32;font-weight:600;margin-left:4px}
 @media print{.back-to-top,.share-btn,.export-btn{display:none!important}}
+
+/* v7.0 Design Consistency Updates */
+:root{--primary:#21A0DB;--primary-dark:#005175;--navy:#0a1628;--cream:#f5f3ef;--accent-light:#4BB8E8;--text-muted:#808A94;}
+.welcome-card{border-radius:10px;transition:transform 0.2s, box-shadow 0.2s;}
+.welcome-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.12);}
+.panel-header h2{color:var(--navy, #0a1628);}
+.panel-header p{color:var(--text-muted, #808A94);}
+.resource-card{border-radius:8px;}
+.global-search{border-radius:8px;}
+
+/* Site Footer */
+.site-footer{background:var(--navy, #0a1628);color:rgba(255,255,255,0.6);padding:3rem 2rem 1.5rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem;}
+.footer-brand{display:flex;flex-direction:column;gap:0.75rem;}
+.footer-tagline{font-size:0.85rem;line-height:1.5;color:rgba(255,255,255,0.45);}
+.footer-social{display:flex;gap:0.75rem;margin-top:0.5rem;}
+.footer-social-link{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.08);transition:background 0.2s;}
+.footer-social-link:hover{background:var(--accent, #21A0DB);}
+.footer-social-link svg{fill:#fff;width:16px;height:16px;}
+.footer-col h4{color:#fff;font-size:0.85rem;margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em;}
+.footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;padding:0.2rem 0;transition:color 0.2s;}
+.footer-col a:hover{color:var(--accent, #21A0DB);}
+.footer-cta-link{color:var(--accent, #21A0DB);font-weight:600;text-decoration:none;font-size:0.95rem;}
+.footer-cta-link:hover{color:#4BB8E8;}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.3);}
+.footer-bottom a{color:rgba(255,255,255,0.3);text-decoration:none;}
+.footer-bottom a:hover{color:var(--accent, #21A0DB);}
+@media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;}.footer-brand{grid-column:1/-1;}}
+@media(max-width:480px){.footer-inner{grid-template-columns:1fr;}}
+
 </style>
 
 
@@ -1254,33 +1284,27 @@
 </div>
 </noscript>
 
-<header class="app-header"><div class="header-inner"><div style="display:flex;align-items:center;gap:12px"><button class="mobile-menu-btn" onclick="toggleSidebar()">&#9776;</button><a class="brand-logo" href="/" aria-label="FamilyVest Home"><img class="brand-logo-img" id="brandLogoImg" src="" alt="FamilyVest at Farther"><div class="brand-mark-fallback" id="brandLogoFallback"><span>FAMILYVEST</span><small>at Farther</small></div></a><div class="app-title">Special Needs Resource Navigator</div></div>
+<header class="app-header"><div class="header-inner"><div style="display:flex;align-items:center;gap:12px"><button class="mobile-menu-btn" onclick="toggleSidebar()"><span style="display:flex;flex-direction:column;gap:4px;width:20px;"><span style="height:2px;background:#fff;border-radius:1px;"></span><span style="height:2px;background:#fff;border-radius:1px;"></span><span style="height:2px;background:#fff;border-radius:1px;"></span></span></button><a class="brand-logo" href="/" aria-label="FamilyVest Home"><img class="brand-logo-img" id="brandLogoImg" src="" alt="FamilyVest at Farther"><div class="brand-mark-fallback" id="brandLogoFallback"><span>FAMILYVEST</span><small>at Farther</small></div></a><div class="app-title">Special Needs Resource Navigator</div></div>
 <div class="global-search-wrap"><input class="global-search" id="globalSearch" type="text" placeholder="Search all resources..." autocomplete="off"><span class="global-search-hint">/</span></div>
-<div style="font-size:11px;color:#888">v6.0 &middot; Feb 2026</div></div></header>
+<div style="font-size:11px;color:#888">v7.0 &middot; Mar 2026</div></div></header>
 <div class="app-body">
 <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
  <div class="nav-logo"><a href="/"><img src="/familyvest-logo.png" alt="FamilyVest at Farther" height="38"></a></div>
  <ul class="nav-links" id="navLinks">
  <li><a href="/about">About</a></li>
  <li class="nav-dropdown">
- <a href="#" aria-haspopup="true">Who We Serve &#9662;</a>
+ <a href="#" aria-haspopup="true">Who We Help &#9662;</a>
  <div class="nav-dropdown-menu">
  <a href="/planning">Families</a>
- <a href="/planning-retirement">Retirees</a>
- <a href="/planning-special-needs">Special Needs Families</a>
+ <a href="/planning-special-needs">Families with Special Needs</a>
+ <a href="/planning-retirement">Pre/Post Retirement</a>
+ <a href="/veterans">Veterans</a>
  <a href="/planning-business-exits">Business Owners</a>
  </div>
  </li>
- <li class="nav-dropdown">
- <a href="#" aria-haspopup="true">Services &#9662;</a>
- <div class="nav-dropdown-menu">
- <a href="/planning">Financial Planning</a>
- <a href="/investment-management">Investment Management</a>
- <a href="/planning-special-needs">Special Needs Planning</a>
- </div>
- </li>
- <li><a href="/blog">Blog</a></li>
- <li><a href="/login">Client Login</a></li>
+ <li><a href="/investment-management">Investments</a></li>
+ <li><a href="/blog">Blog &amp; Resources</a></li>
+ <li><a href="/contact">Contact</a></li>
  </ul>
  <div class="nav-cta"><a href="/get-started" data-track="nav-get-started">Get Started</a></div>
  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"></button>
@@ -1289,7 +1313,7 @@
 <div class="profile-bar">
 <div class="profile-field"><label>Age Group</label><select id="ageGroup"><option value="all">All Ages</option><option value="early">Early Childhood (0-5)</option><option value="school">School Age (6-12)</option><option value="teen">Teen (13-17)</option><option value="young-adult">Young Adult (18-25)</option><option value="adult">Adult (26+)</option></select></div>
 <div class="profile-field"><label>State</label><select id="userState"><option value="">Select state...</option></select></div>
-<button class="btn-apply" onclick="applyProfile()">Update Results</button>
+<button class="btn-apply" onclick="applyProfile()" style="background:var(--primary, #21A0DB);color:#fff;border:none;border-radius:6px;padding:8px 20px;font-weight:600;cursor:pointer;">Update Results</button>
 
 </div>
 <div style="font-size:12px;color:var(--text-muted);margin-bottom:16px;padding:0 2px">Educational resource only. Not a recommendation. Verify providers independently.</div>
@@ -1319,7 +1343,7 @@
 <div class="welcome-card" onclick="navigateTo('resource-map')"><h3>Resource Map</h3><p>Interactive map of providers and programs near you.</p></div>
 <div class="welcome-card" onclick="navigateTo('therapies')"><h3>Outpatient Therapies</h3><p>ABA, speech, OT, hippotherapy, music therapy.</p></div>
 <div class="welcome-card" onclick="navigateTo('schools')"><h3>Therapeutic Schools</h3><p>Full-time programs for students on the spectrum.</p></div>
-<div class="welcome-card" onclick="navigateTo('day-programs')"><div class="wc-icon">&#9728;</div><h3>Day Programs</h3><p>Structured adult daytime services.</p></div>
+<div class="welcome-card" onclick="navigateTo('day-programs')"><h3>Day Programs</h3><p>Structured adult daytime services.</p></div>
 <div class="welcome-card" onclick="navigateTo('residential')"><h3>Residential</h3><p>Group homes and supported living.</p></div>
 <div class="welcome-card" onclick="navigateTo('social-clubs')"><h3>Social &amp; Activities</h3><p>Community programs and parent support.</p></div>
 <div class="welcome-card" onclick="navigateTo('loi-builder')"><h3>LOI Builder</h3><p>Letters of intent for program applications.</p></div>
@@ -1352,7 +1376,7 @@
 <button class="benefit-chip" data-cat="insurance-mandate" onclick="filterBenefitsCat('insurance-mandate')" style="padding:4px 12px;border:1px solid var(--border);border-radius:16px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer;font-family:var(--font)"> Insurance</button>
 <button class="benefit-chip" data-cat="vocational-rehab" onclick="filterBenefitsCat('vocational-rehab')" style="padding:4px 12px;border:1px solid var(--border);border-radius:16px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer;font-family:var(--font)"> Vocational Rehab</button>
 <button class="benefit-chip" data-cat="able" onclick="filterBenefitsCat('able')" style="padding:4px 12px;border:1px solid var(--border);border-radius:16px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer;font-family:var(--font)"> ABLE Accounts</button>
-<button class="benefit-chip" data-cat="guardianship" onclick="filterBenefitsCat('guardianship')" style="padding:4px 12px;border:1px solid var(--border);border-radius:16px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer;font-family:var(--font)">&#9878; Guardianship &amp; SDM</button>
+<button class="benefit-chip" data-cat="guardianship" onclick="filterBenefitsCat('guardianship')" style="padding:4px 12px;border:1px solid var(--border);border-radius:16px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer;font-family:var(--font)">Guardianship &amp; SDM</button>
 <button class="benefit-chip" data-cat="trust" onclick="filterBenefitsCat('trust')" style="padding:4px 12px;border:1px solid var(--border);border-radius:16px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer;font-family:var(--font)"> Trusts</button>
 <button class="benefit-chip" data-cat="respite" onclick="filterBenefitsCat('respite')" style="padding:4px 12px;border:1px solid var(--border);border-radius:16px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer;font-family:var(--font)"> Respite Care</button>
 <button class="benefit-chip" data-cat="housing" onclick="filterBenefitsCat('housing')" style="padding:4px 12px;border:1px solid var(--border);border-radius:16px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer;font-family:var(--font)"> Housing</button>
@@ -1381,7 +1405,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
-const CAT_COLORS={therapies:'#148f77',schools:'#b7950b','day-programs':'#2874a6',residential:'#8e44ad','social-clubs':'#7d3c98',psychiatrists:'#922b21','dev-peds':'#d35400',neurologists:'#2c3e50',events:'#b5651d',research:'#1565c0'};
+const CAT_COLORS={therapies:'#21A0DB',schools:'#005175','day-programs':'#2874a6',residential:'#6B4C9A','social-clubs':'#4BB8E8',psychiatrists:'#C0392B','dev-peds':'#D35400',neurologists:'#2C3E50',events:'#E67E22',research:'#1565C0'};
 const CAT_LABELS={therapies:'Therapies',schools:'Schools','day-programs':'Day Programs',residential:'Residential','social-clubs':'Social Clubs',psychiatrists:'Psychiatrists','dev-peds':'Dev. Peds',neurologists:'Neurologists',events:'Events',research:'Research'};
 
 const GEO={
@@ -3844,7 +3868,37 @@ function toggleFavorite(key){if(appState.favorites.has(key))appState.favorites.d
 function updateFavCount(){const el=document.getElementById('fav-count');el.textContent=appState.favorites.size;el.style.display=appState.favorites.size?'inline':'none';}
 function isFav(i){return appState.favorites.has(rKey(i));}
 function renderFavorites(){const g=document.getElementById('grid-favorites'),e=document.getElementById('favorites-empty');if(!appState.favorites.size){g.innerHTML='';e.style.display='block';return;}e.style.display='none';const all=[];Object.keys(DATA).forEach(k=>{if(Array.isArray(DATA[k]))DATA[k].forEach(i=>{if(isFav(i))all.push(i);});});g.innerHTML=all.map(i=>renderCard(i)).join('');}
-function printFavorites(){if(!appState.favorites.size){showNotification('No favorites to print','error');return;}const all=[];Object.keys(DATA).forEach(k=>{if(Array.isArray(DATA[k]))DATA[k].forEach(i=>{if(isFav(i))all.push(i);});});const today=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});const w=window.open('','_blank');w.document.write('<html><head><title>FamilyVest Favorites</title><style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:800px;margin:40px auto;padding:20px;font-size:13px;color:#222}h1{font-size:20px;border-bottom:2px solid #29ABE2;padding-bottom:8px;margin-bottom:20px}h1 span{color:#29ABE2}.item{border:1px solid #dde1e6;border-radius:6px;padding:14px;margin-bottom:12px;page-break-inside:avoid}.item h3{font-size:15px;margin:0 0 4px}.item p{margin:4px 0;color:#555}.item a{color:#29ABE2}.meta{font-size:12px;color:#888}.footer{margin-top:30px;padding-top:12px;border-top:1px solid #ddd;font-size:11px;color:#999}</style></head><body><h1><span>FAMILY</span>VEST Autism Resource Navigator - My Favorites</h1><p style="color:#666;margin-bottom:20px">Generated '+today+' &middot; '+all.length+' resources</p>');all.forEach(i=>{w.document.write('<div class="item"><h3>'+i.name+'</h3><p>'+i.desc+'</p><div class="meta">'+(i.state!=='national'?i.state+' &middot; ':'')+(i.phone||'')+(i.insurance==='yes'?' &middot; Accepts Insurance':'')+'</div><a href="'+i.url+'">'+i.url+'</a></div>');});w.document.write('<div class="footer"><span style="color:#29ABE2;font-weight:600">FAMILY</span><span style="color:#999;font-weight:600">VEST</span> at Farther &middot; '+today+'</div></body></html>');w.document.close();w.print();}
+function printFavorites(){if(!appState.favorites.size){showNotification('No favorites to print','error');return;}const all=[];Object.keys(DATA).forEach(k=>{if(Array.isArray(DATA[k]))DATA[k].forEach(i=>{if(isFav(i))all.push(i);});});const today=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});const w=window.open('','_blank');w.document.write('<html><head><title>FamilyVest Favorites</title><style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:800px;margin:40px auto;padding:20px;font-size:13px;color:#222}h1{font-size:20px;border-bottom:2px solid #29ABE2;padding-bottom:8px;margin-bottom:20px}h1 span{color:#29ABE2}.item{border:1px solid #dde1e6;border-radius:6px;padding:14px;margin-bottom:12px;page-break-inside:avoid}.item h3{font-size:15px;margin:0 0 4px}.item p{margin:4px 0;color:#555}.item a{color:#29ABE2}.meta{font-size:12px;color:#888}.footer{margin-top:30px;padding-top:12px;border-top:1px solid #ddd;font-size:11px;color:#999}
+/* v7.0 Design Consistency Updates */
+:root{--primary:#21A0DB;--primary-dark:#005175;--navy:#0a1628;--cream:#f5f3ef;--accent-light:#4BB8E8;--text-muted:#808A94;}
+.welcome-card{border-radius:10px;transition:transform 0.2s, box-shadow 0.2s;}
+.welcome-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.12);}
+.panel-header h2{color:var(--navy, #0a1628);}
+.panel-header p{color:var(--text-muted, #808A94);}
+.resource-card{border-radius:8px;}
+.global-search{border-radius:8px;}
+
+/* Site Footer */
+.site-footer{background:var(--navy, #0a1628);color:rgba(255,255,255,0.6);padding:3rem 2rem 1.5rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem;}
+.footer-brand{display:flex;flex-direction:column;gap:0.75rem;}
+.footer-tagline{font-size:0.85rem;line-height:1.5;color:rgba(255,255,255,0.45);}
+.footer-social{display:flex;gap:0.75rem;margin-top:0.5rem;}
+.footer-social-link{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.08);transition:background 0.2s;}
+.footer-social-link:hover{background:var(--accent, #21A0DB);}
+.footer-social-link svg{fill:#fff;width:16px;height:16px;}
+.footer-col h4{color:#fff;font-size:0.85rem;margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em;}
+.footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;padding:0.2rem 0;transition:color 0.2s;}
+.footer-col a:hover{color:var(--accent, #21A0DB);}
+.footer-cta-link{color:var(--accent, #21A0DB);font-weight:600;text-decoration:none;font-size:0.95rem;}
+.footer-cta-link:hover{color:#4BB8E8;}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.3);}
+.footer-bottom a{color:rgba(255,255,255,0.3);text-decoration:none;}
+.footer-bottom a:hover{color:var(--accent, #21A0DB);}
+@media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;}.footer-brand{grid-column:1/-1;}}
+@media(max-width:480px){.footer-inner{grid-template-columns:1fr;}}
+
+</style></head><body><h1><span>FAMILY</span>VEST Autism Resource Navigator - My Favorites</h1><p style="color:#666;margin-bottom:20px">Generated '+today+' &middot; '+all.length+' resources</p>');all.forEach(i=>{w.document.write('<div class="item"><h3>'+i.name+'</h3><p>'+i.desc+'</p><div class="meta">'+(i.state!=='national'?i.state+' &middot; ':'')+(i.phone||'')+(i.insurance==='yes'?' &middot; Accepts Insurance':'')+'</div><a href="'+i.url+'">'+i.url+'</a></div>');});w.document.write('<div class="footer"><span style="color:#29ABE2;font-weight:600">FAMILY</span><span style="color:#999;font-weight:600">VEST</span> at Farther &middot; '+today+'</div></body></html>');w.document.close();w.print();}
 
 // --- Compare ---
 function toggleCompare(key){const idx=appState.compareList.findIndex(c=>c===key);if(idx>-1)appState.compareList.splice(idx,1);else{if(appState.compareList.length>=4){showNotification('Max 4 for comparison','error');return;}appState.compareList.push(key);}updateCompareBar();renderPanel(appState.currentPanel);}
@@ -3917,7 +3971,7 @@ function renderAgeSummaryFor(p){const el=document.getElementById('age-summary-'+
 
 function renderAll(){['therapies','schools','day-programs','residential','social-clubs','psychiatrists','dev-peds','neurologists','events','research'].forEach(renderPanel);renderBenefits();renderAgeSummary();}
 
-function renderCard(i){const tc=typeClass(i),tl=typeLabel(i),key=rKey(i),favActive=isFav(i),compActive=isCompared(i);let m='';if(i.state!=='national')m+='<span> '+i.state+'</span>';if(i.phone)m+='<span> '+i.phone+'</span>';if(i.dates)m+='<span> '+i.dates+'</span>';let st='';if(i.insurance==='yes')st+='<span class="tag tag-insurance">Accepts Insurance</span>';if(i.insurance==='medicaid')st+='<span class="tag tag-insurance">Medicaid</span>';if(i.insurance==='free')st+='<span class="tag tag-free">Free</span>';if(i.waitlist==='waitlist')st+='<span class="tag tag-waitlist">Waitlist</span>';if(i.waitlist==='open')st+='<span class="tag tag-free">Accepting</span>';return'<div class="resource-card" data-type="'+i.type+'" data-insurance="'+(i.insurance||'')+'" data-waitlist="'+(i.waitlist||'')+'" data-search="'+(i.name+' '+i.desc+' '+(i.tags||[]).join(' ')).toLowerCase()+'"><button class="fav-btn'+(favActive?' active':'')+'" data-key="'+key.replace(/"/g,'&quot;')+'" title="'+(favActive?'Remove from':'Add to')+' favorites">'+(favActive?'':'&#9825;')+'</button><span class="card-type '+tc+'">'+tl+'</span><h3>'+i.name+'</h3><div class="card-desc">'+i.desc+'</div>'+(m?'<div class="card-meta">'+m+'</div>':'')+'<div style="margin-bottom:8px">'+(i.ageGroups||[]).map(a=>'<span class="age-badge">'+a+'</span>').join('')+'</div><div class="card-tags">'+st+(i.tags||[]).map(t=>'<span class="tag">'+t+'</span>').join('')+'</div><div class="card-actions"><a class="card-link" href="'+i.url+'" target="_blank" rel="noopener">Visit Resource &#8594;</a><button class="compare-btn'+(compActive?' active':'')+'" data-key="'+key.replace(/"/g,'&quot;')+'">'+(compActive?' Comparing':'+ Compare')+'</button><button class="share-btn" onclick="shareResource(event,this)" data-name="'+i.name.replace(/"/g,'&quot;')+'" data-url="'+i.url+'"> Share</button></div></div>';}
+function renderCard(i){const tc=typeClass(i),tl=typeLabel(i),key=rKey(i),favActive=isFav(i),compActive=isCompared(i);let m='';if(i.state!=='national')m+='<span> '+i.state+'</span>';if(i.phone)m+='<span> '+i.phone+'</span>';if(i.dates)m+='<span> '+i.dates+'</span>';let st='';if(i.insurance==='yes')st+='<span class="tag tag-insurance">Accepts Insurance</span>';if(i.insurance==='medicaid')st+='<span class="tag tag-insurance">Medicaid</span>';if(i.insurance==='free')st+='<span class="tag tag-free">Free</span>';if(i.waitlist==='waitlist')st+='<span class="tag tag-waitlist">Waitlist</span>';if(i.waitlist==='open')st+='<span class="tag tag-free">Accepting</span>';return'<div class="resource-card" data-type="'+i.type+'" data-insurance="'+(i.insurance||'')+'" data-waitlist="'+(i.waitlist||'')+'" data-search="'+(i.name+' '+i.desc+' '+(i.tags||[]).join(' ')).toLowerCase()+'"><button class="fav-btn'+(favActive?' active':'')+'" data-key="'+key.replace(/"/g,'&quot;')+'" title="'+(favActive?'Remove from':'Add to')+' favorites">'+(favActive?'':'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>')+'</button><span class="card-type '+tc+'">'+tl+'</span><h3>'+i.name+'</h3><div class="card-desc">'+i.desc+'</div>'+(m?'<div class="card-meta">'+m+'</div>':'')+'<div style="margin-bottom:8px">'+(i.ageGroups||[]).map(a=>'<span class="age-badge">'+a+'</span>').join('')+'</div><div class="card-tags">'+st+(i.tags||[]).map(t=>'<span class="tag">'+t+'</span>').join('')+'</div><div class="card-actions"><a class="card-link" href="'+i.url+'" target="_blank" rel="noopener">Visit Resource &#8594;</a><button class="compare-btn'+(compActive?' active':'')+'" data-key="'+key.replace(/"/g,'&quot;')+'">'+(compActive?' Comparing':'+ Compare')+'</button><button class="share-btn" onclick="shareResource(event,this)" data-name="'+i.name.replace(/"/g,'&quot;')+'" data-url="'+i.url+'"> Share</button></div></div>';}
 
 function renderPanel(p){const g=document.getElementById('grid-'+p);if(!g)return;const items=DATA[p];if(!items)return;const f=items.filter(i=>{if(appState.state&&i.state!=='national'&&i.state!==appState.state)return false;if(appState.ageGroup!=='all'&&!i.ageGroups.includes(appState.ageGroup))return false;return true;});if(!f.length){g.innerHTML='<div class="empty-state" style="grid-column:1/-1"><h3>No results</h3><p>'+(appState.state?'No '+appState.state+' resources here yet.':'Select a state to see local resources.')+'</p></div>';return;}g.innerHTML=f.map(i=>renderCard(i)).join('');}
 
@@ -3927,7 +3981,7 @@ function typeLabel(i){return{speech:'Speech',ot:'OT',aba:'ABA',hippo:'Hippothera
 function catForItem(i){const cats=Object.keys(DATA);for(const c of cats){if(Array.isArray(DATA[c])&&DATA[c].includes(i))return c;}return'therapies';}
 
 function renderBenefits(){
-const CAT_META={"dd-agency":{label:"DD/IDD Agency",icon:"",order:1},"waiver":{label:"Medicaid Waivers",icon:"",order:2},"early-intervention":{label:"Early Intervention (Birth-3)",icon:"",order:3},"insurance-mandate":{label:"Autism Insurance Mandates",icon:"",order:4},"healthcare":{label:"Healthcare & Therapy",icon:"",order:5},"vocational-rehab":{label:"Vocational Rehabilitation",icon:"",order:6},"education":{label:"Education Programs",icon:"",order:7},"income-support":{label:"Income Support",icon:"",order:8},"able":{label:"ABLE Accounts & Savings",icon:"",order:9},"housing":{label:"Housing",icon:"",order:10},"navigation":{label:"Navigation & Support",icon:"",order:11},"registry":{label:"Registries",icon:"",order:12},"respite":{label:"Respite Care",icon:"",order:13},"guardianship":{label:"Guardianship & SDM",icon:"&#9878;",order:14},"trust":{label:"Special Needs Trusts",icon:"",order:15}};
+const CAT_META={"dd-agency":{label:"DD/IDD Agency",icon:"",order:1},"waiver":{label:"Medicaid Waivers",icon:"",order:2},"early-intervention":{label:"Early Intervention (Birth-3)",icon:"",order:3},"insurance-mandate":{label:"Autism Insurance Mandates",icon:"",order:4},"healthcare":{label:"Healthcare & Therapy",icon:"",order:5},"vocational-rehab":{label:"Vocational Rehabilitation",icon:"",order:6},"education":{label:"Education Programs",icon:"",order:7},"income-support":{label:"Income Support",icon:"",order:8},"able":{label:"ABLE Accounts & Savings",icon:"",order:9},"housing":{label:"Housing",icon:"",order:10},"navigation":{label:"Navigation & Support",icon:"",order:11},"registry":{label:"Registries",icon:"",order:12},"respite":{label:"Respite Care",icon:"",order:13},"guardianship":{label:"Guardianship & SDM",icon:"",order:14},"trust":{label:"Special Needs Trusts",icon:"",order:15}};
 function renderBenefitCard(b){const id='bc-'+Math.random().toString(36).substr(2,6);return '<div class="benefit-card"><div class="benefit-card-inner"><div class="benefit-card-body"><div class="benefit-card-name">'+b.name+'</div><div class="benefit-desc" id="'+id+'">'+b.desc+'</div><button class="benefit-expand" onclick="toggleBenefitDesc(\''+id+'\',this)">Show more</button><div class="benefit-card-eligibility"><em>Eligibility:</em> '+b.eligibility+'</div></div><div class="benefit-card-actions">'+(b.phone?'<div class="benefit-card-phone"><a href="tel:'+b.phone.replace(/[^0-9+]/g,'')+'">'+b.phone+'</a></div>':'')+'<a href="'+b.url+'" target="_blank" rel="noopener" class="card-link" style="font-size:12px">Details &#8594;</a></div></div></div>';}
 function groupByCategory(items){const groups={};items.forEach(b=>{const cat=b.category||'other';if(!groups[cat])groups[cat]=[];groups[cat].push(b);});return Object.keys(groups).sort((a,b)=>(CAT_META[a]?.order||99)-(CAT_META[b]?.order||99)).map(cat=>({cat,meta:CAT_META[cat]||{label:cat,icon:""},items:groups[cat]}));}
 // Federal
@@ -4022,7 +4076,37 @@ const sg=document.getElementById('state-benefits-grouped');
 if(!sg||!sg.innerHTML)return;
 const stateName=document.getElementById('state-benefits-header')?.textContent||'State Programs';
 const w=window.open('','_blank');
-w.document.write('<html><head><title>'+stateName+' - FamilyVest</title><style>body{font-family:-apple-system,sans-serif;padding:32px;max-width:800px;margin:0 auto;font-size:14px;line-height:1.6}h1{font-size:22px;margin-bottom:4px}h4{font-size:13px;color:#666;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid #ddd;padding-bottom:6px;margin:20px 0 10px}.benefit-card{border:1px solid #eee;border-radius:6px;padding:14px;margin-bottom:10px;page-break-inside:avoid}.benefit-desc{margin:4px 0}.benefit-expand{display:none}a{color:#29ABE2}@media print{a[href]:after{content:" (" attr(href) ")";font-size:11px;color:#888}}</style></head><body><h1>'+stateName+'</h1><p style="color:#666;margin-bottom:20px">Generated from FamilyVest Special Needs Resource Navigator</p>'+sg.innerHTML+'</body></html>');
+w.document.write('<html><head><title>'+stateName+' - FamilyVest</title><style>body{font-family:-apple-system,sans-serif;padding:32px;max-width:800px;margin:0 auto;font-size:14px;line-height:1.6}h1{font-size:22px;margin-bottom:4px}h4{font-size:13px;color:#666;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid #ddd;padding-bottom:6px;margin:20px 0 10px}.benefit-card{border:1px solid #eee;border-radius:6px;padding:14px;margin-bottom:10px;page-break-inside:avoid}.benefit-desc{margin:4px 0}.benefit-expand{display:none}a{color:#29ABE2}@media print{a[href]:after{content:" (" attr(href) ")";font-size:11px;color:#888}}
+/* v7.0 Design Consistency Updates */
+:root{--primary:#21A0DB;--primary-dark:#005175;--navy:#0a1628;--cream:#f5f3ef;--accent-light:#4BB8E8;--text-muted:#808A94;}
+.welcome-card{border-radius:10px;transition:transform 0.2s, box-shadow 0.2s;}
+.welcome-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.12);}
+.panel-header h2{color:var(--navy, #0a1628);}
+.panel-header p{color:var(--text-muted, #808A94);}
+.resource-card{border-radius:8px;}
+.global-search{border-radius:8px;}
+
+/* Site Footer */
+.site-footer{background:var(--navy, #0a1628);color:rgba(255,255,255,0.6);padding:3rem 2rem 1.5rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem;}
+.footer-brand{display:flex;flex-direction:column;gap:0.75rem;}
+.footer-tagline{font-size:0.85rem;line-height:1.5;color:rgba(255,255,255,0.45);}
+.footer-social{display:flex;gap:0.75rem;margin-top:0.5rem;}
+.footer-social-link{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.08);transition:background 0.2s;}
+.footer-social-link:hover{background:var(--accent, #21A0DB);}
+.footer-social-link svg{fill:#fff;width:16px;height:16px;}
+.footer-col h4{color:#fff;font-size:0.85rem;margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em;}
+.footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;padding:0.2rem 0;transition:color 0.2s;}
+.footer-col a:hover{color:var(--accent, #21A0DB);}
+.footer-cta-link{color:var(--accent, #21A0DB);font-weight:600;text-decoration:none;font-size:0.95rem;}
+.footer-cta-link:hover{color:#4BB8E8;}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.3);}
+.footer-bottom a{color:rgba(255,255,255,0.3);text-decoration:none;}
+.footer-bottom a:hover{color:var(--accent, #21A0DB);}
+@media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;}.footer-brand{grid-column:1/-1;}}
+@media(max-width:480px){.footer-inner{grid-template-columns:1fr;}}
+
+</style></head><body><h1>'+stateName+'</h1><p style="color:#666;margin-bottom:20px">Generated from FamilyVest Special Needs Resource Navigator</p>'+sg.innerHTML+'</body></html>');
 w.document.close();w.print();
 }
 function changeBenefitsState(val){
@@ -4083,6 +4167,36 @@ function printLOI(){const c=document.getElementById('loi-preview-content').inner
 .footer-social svg{vertical-align:middle}
 .footer-cta-link{display:inline-block;color:#21A0DB;font-size:0.85rem;font-weight:600;margin-top:0.75rem;transition:color 0.2s}
 .footer-cta-link:hover{color:#4BB8E8}
+
+/* v7.0 Design Consistency Updates */
+:root{--primary:#21A0DB;--primary-dark:#005175;--navy:#0a1628;--cream:#f5f3ef;--accent-light:#4BB8E8;--text-muted:#808A94;}
+.welcome-card{border-radius:10px;transition:transform 0.2s, box-shadow 0.2s;}
+.welcome-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.12);}
+.panel-header h2{color:var(--navy, #0a1628);}
+.panel-header p{color:var(--text-muted, #808A94);}
+.resource-card{border-radius:8px;}
+.global-search{border-radius:8px;}
+
+/* Site Footer */
+.site-footer{background:var(--navy, #0a1628);color:rgba(255,255,255,0.6);padding:3rem 2rem 1.5rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem;}
+.footer-brand{display:flex;flex-direction:column;gap:0.75rem;}
+.footer-tagline{font-size:0.85rem;line-height:1.5;color:rgba(255,255,255,0.45);}
+.footer-social{display:flex;gap:0.75rem;margin-top:0.5rem;}
+.footer-social-link{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.08);transition:background 0.2s;}
+.footer-social-link:hover{background:var(--accent, #21A0DB);}
+.footer-social-link svg{fill:#fff;width:16px;height:16px;}
+.footer-col h4{color:#fff;font-size:0.85rem;margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em;}
+.footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;padding:0.2rem 0;transition:color 0.2s;}
+.footer-col a:hover{color:var(--accent, #21A0DB);}
+.footer-cta-link{color:var(--accent, #21A0DB);font-weight:600;text-decoration:none;font-size:0.95rem;}
+.footer-cta-link:hover{color:#4BB8E8;}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.3);}
+.footer-bottom a{color:rgba(255,255,255,0.3);text-decoration:none;}
+.footer-bottom a:hover{color:var(--accent, #21A0DB);}
+@media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;}.footer-brand{grid-column:1/-1;}}
+@media(max-width:480px){.footer-inner{grid-template-columns:1fr;}}
+
 </style></head><body>'+c+'</body></html>');w.document.close();w.print();}
 function clearLOIForm(){document.querySelectorAll('#loi-form-view input,#loi-form-view select,#loi-form-view textarea').forEach(e=>e.value='');appState.uploadedFiles=[];renderFileList();editLOI();}
 function saveLOIData(){try{const d={};document.querySelectorAll('#loi-form-view input,#loi-form-view select,#loi-form-view textarea').forEach(e=>{if(e.id)d[e.id]=e.value});sessionStorage.setItem('loi-draft',JSON.stringify(d));showNotification('Draft saved','success');}catch(e){showNotification('Save failed','error');}}
@@ -4188,6 +4302,56 @@ card.style.display=show?'':'none';
 }
 
 </script>
+<footer class="site-footer">
+ <div class="footer-inner">
+ <div class="footer-top">
+ <div class="footer-brand-col">
+ <div class="footer-brand">FamilyVest</div>
+ <div class="footer-brand-sub">A Farther Advisor</div>
+ <p class="footer-tagline">Comprehensive wealth management and financial planning for families navigating complexity.</p>
+ <div class="footer-social">
+ <a href="https://www.facebook.com/FamilyVest" aria-label="Facebook" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+ <a href="https://www.instagram.com/family_vest/" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+ <a href="https://www.linkedin.com/in/toddsensing/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+ </div>
+ </div>
+ <div class="footer-col">
+ <h5>Quick Links</h5>
+ <a href="/about">About</a>
+ <a href="/planning">Financial Planning</a>
+ <a href="/investment-management">Investment Management</a>
+ <a href="/blog">Blog &amp; Resources</a>
+ </div>
+ <div class="footer-col">
+ <h5>Who We Serve</h5>
+ <a href="/planning">Families</a>
+ <a href="/planning-retirement">Retirees</a>
+ <a href="/planning-special-needs">Special Needs Families</a>
+ <a href="/planning-business-exits">Business Owners</a>
+ </div>
+ <div class="footer-col">
+ <h5>Contact</h5>
+ <div class="footer-contact-item">4012 Commons Dr W, Suite 118</div>
+ <div class="footer-contact-item">Destin, FL 32541</div>
+ <div class="footer-contact-item"><a href="tel:8446283185">844-628-3185</a></div>
+ <div class="footer-contact-item"><a href="mailto:todd@familyvest.com">todd@familyvest.com</a></div>
+ <a href="/get-started" class="footer-cta-link">Schedule a Conversation &rarr;</a>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <div class="footer-legal-links">
+ <a href="/privacy">Privacy Policy</a>
+ <a href="/terms">Terms of Use</a>
+ <a href="/disclosures">Disclosures</a>
+ <a href="/adv">ADV Part 2</a>
+ </div>
+ <p class="footer-disclosure">Investment advisory services offered through Farther Asset Management, a registered investment adviser. FamilyVest is a trade name used by Todd Sensing. This is not an offer to buy or sell securities. Past performance is not a guarantee of future results. All investing involves risk, including the possible loss of principal.</p>
+ <p class="footer-copyright">&copy; 2026 FamilyVest. All rights reserved.</p>
+ </div>
+ </div>
+</footer>
+
+
 <footer class="site-footer">
  <div class="footer-inner">
  <div class="footer-top">
