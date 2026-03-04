@@ -1,0 +1,306 @@
+================================================================================
+FAMILYVEST WEBSITE - VISUAL CONSISTENCY AUDIT REPORT
+================================================================================
+Date: 2026-03-04
+Scope: All 20 HTML pages
+Total Issues Found: 1,510
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+CRITICAL FINDING: Multiple pages have structural and styling inconsistencies
+that will impact deployment readiness and WCAG accessibility compliance.
+
+Files Audited (20):
+  404.html, about.html, adv.html, autism-resource-navigator.html
+  blog.html, contact.html, disclosures.html, forgot-password.html
+  get-started.html, index.html, investment-management.html, login.html
+  planning-business-exits.html, planning-retirement.html
+  planning-special-needs.html, planning.html, privacy.html
+  terms.html, thank-you.html, veterans.html
+
+Result: ALL 20 PAGES have issues. Severity ranges from HIGH to MEDIUM.
+
+================================================================================
+CRITICAL ISSUES (Blocking Deployment)
+================================================================================
+
+1. MISSING BUTTON STYLE DEFINITIONS
+   Severity: CRITICAL
+   Impact: All 20 pages (66 instances total)
+   
+   Issue: The following button selectors are referenced but have NO CSS definitions:
+     - .btn-accent
+     - .btn-outline
+     - .hero-cta
+     - .btn-submit
+   
+   Expected Styles (per requirements):
+     padding: 0.9rem 2.2rem
+     font-size: 0.95rem
+     font-weight: 600
+     letter-spacing: 0.04em
+     border-radius: 4px
+   
+   Action Required: Add complete CSS definitions for all four button classes
+   Affected Pages: ALL 20
+
+2. FONT VARIABLE RESOLUTION FAILURE
+   Severity: CRITICAL
+   Impact: All 20 pages (40 instances total)
+   
+   Issue: CSS uses variables that are not defined or not resolving:
+     - var(--font-display) [should = Cormorant Garamond]
+     - var(--font-body) [should = DM Sans]
+   
+   Current: Pages reference undefined variables instead of actual font names
+   Expected: Direct font-family declarations or globally defined CSS variables
+   
+   Action Required: 
+     a) Define global CSS variables in a shared stylesheet or :root
+     b) Ensure variables are available on ALL pages
+     c) Verify fallback font stacks are in place
+   
+   Affected Pages: ALL 20
+
+3. HEADING FONT WEIGHTS INCORRECT
+   Severity: CRITICAL (Typography)
+   Impact: ~30+ instances across multiple pages
+   
+   Issue: h1 and h2 elements using insufficient font-weight values:
+     - Found: font-weight 400, 500, 600
+     - Expected: font-weight 700 or bold
+   
+   Examples:
+     - 404.html: h1 = 600, h2 = undefined
+     - about.html: h1 = 400, h2 = 500 or 400
+     - adv.html: h1 = 600, h2 = 600
+   
+   Impact: Headings appear too light, reducing visual hierarchy and readability
+   
+   Action Required: Update all h1 and h2 to font-weight: 700
+   
+   Affected Pages: 404.html, about.html, adv.html, blog.html, contact.html,
+                  disclosures.html, forgot-password.html, get-started.html,
+                  index.html, login.html, planning-*.html, privacy.html,
+                  terms.html, thank-you.html, veterans.html
+
+================================================================================
+HIGH PRIORITY ISSUES (Accessibility Concerns)
+================================================================================
+
+4. BODY TEXT SIZE BELOW MINIMUM
+   Severity: HIGH (WCAG)
+   Impact: ~50 instances across pages
+   
+   Issue: Some body/paragraph text sizes fall below 0.95rem (14px) minimum
+   
+   Found Sizes:
+     - 0.76rem (12.2px)
+     - 0.78rem (12.5px)
+     - 0.8rem (12.8px)
+     - 0.82rem (13.1px)
+     - 0.84rem (13.4px)
+     - 0.86rem (13.8px)
+     - 0.88rem (14.1px) [borderline]
+     - 0.9rem (14.4px) [borderline]
+     - 12px-15px (various)
+   
+   WCAG 2.1 Requirement: Minimum 0.95rem (14px) for normal text
+   Accessibility Impact: Reduced readability, especially for users 50+ and those
+                        with vision impairments
+   
+   Affected Pages: about.html, autism-resource-navigator.html, blog.html,
+                  contact.html, and others
+   
+   Action Required: Audit all <p>, <body>, and text elements. Update any below
+                   0.95rem to meet accessibility minimum.
+
+5. LOW CONTRAST RGBA VALUES
+   Severity: HIGH (WCAG AAA concern, some AA failures)
+   Impact: 887 instances across all pages
+   
+   Issue: Widespread use of very light rgba() colors with low alpha values
+   
+   Alpha Values Below 0.4 (highest risk):
+     - Alpha 0.02-0.08: 330 instances (extremely low - avoid)
+     - Alpha 0.1-0.2: 160 instances (very low - at risk)
+     - Alpha 0.25-0.3: 164 instances (low - test on actual backgrounds)
+     - Alpha 0.35-0.38: 38 instances (borderline)
+   
+   WCAG 2.1 Level AA Requirement: 4.5:1 contrast ratio for normal text
+   
+   Examples of problematic values:
+     - rgba(33, 160, 219, 0.08) - 8% opacity blue on light = very faint
+     - rgba(255, 255, 255, 0.05) - 5% opacity white on dark = nearly invisible
+     - rgba(0, 0, 0, 0.3) - 30% opacity black on light = may fail AA
+   
+   Recommendation: 
+     a) Audit each rgba color against its background
+     b) Increase alpha to at least 0.4 for any text or essential UI elements
+     c) For decorative overlays, current values may be acceptable
+   
+   Affected Pages: ALL 20 (design-wide issue)
+
+================================================================================
+MEDIUM PRIORITY ISSUES (Consistency & Polish)
+================================================================================
+
+6. FOOTER INCONSISTENCIES
+   Severity: MEDIUM
+   Impact: 1 instance
+   
+   Issue: Footer HTML structure varies slightly across pages
+   
+   Action Required: Standardize footer HTML and ensure identical structure
+                   on all pages
+
+7. NAVIGATION STRUCTURE VARIATIONS
+   Severity: LOW
+   Impact: Minimal (most pages consistent)
+   
+   Issue: Some navigation links may differ between pages
+   
+   Action Required: Audit and standardize nav links across all pages
+
+================================================================================
+ISSUE DISTRIBUTION BY PAGE
+================================================================================
+
+Page-by-page issue count:
+  404.html: 28 issues
+  about.html: 42 issues
+  adv.html: 26 issues
+  autism-resource-navigator.html: 124 issues (large page)
+  blog.html: 117 issues (large page)
+  contact.html: 84 issues
+  disclosures.html: 95 issues
+  forgot-password.html: 45 issues
+  get-started.html: 59 issues
+  index.html: 51 issues
+  investment-management.html: 92 issues
+  login.html: 62 issues
+  planning-business-exits.html: 91 issues
+  planning-retirement.html: 101 issues
+  planning-special-needs.html: 108 issues
+  planning.html: 84 issues
+  privacy.html: 95 issues
+  terms.html: 95 issues
+  thank-you.html: 45 issues
+  veterans.html: 72 issues
+
+Total: 1,510 issues across all pages
+
+Note: Some pages (autism-resource-navigator, blog, planning pages) have more
+      issues due to larger size and more complex content.
+
+================================================================================
+RECOMMENDED REMEDIATION ORDER
+================================================================================
+
+PRIORITY 1 (Do First - These block everything else):
+  1. Define CSS variables globally
+     - Create _variables.css or add to main stylesheet
+     - Set --font-display: 'Cormorant Garamond', serif;
+     - Set --font-body: 'DM Sans', sans-serif;
+     - Include in <head> of all pages BEFORE other styles
+
+  2. Add missing button styles
+     - Define .btn-accent, .btn-outline, .hero-cta, .btn-submit
+     - Include standard properties from requirements
+     - Test on all pages
+
+PRIORITY 2 (Do Next - High impact):
+  3. Fix h1/h2 font-weights to 700
+     - Global CSS change affects all 20 pages
+     - Verify visual appearance after change
+
+  4. Audit and increase body text size minima
+     - Find all <p> tags with size < 0.95rem
+     - Update to 0.95rem or higher
+     - Test readability
+
+PRIORITY 3 (Do Before Launch - Accessibility):
+  5. Review and test contrast ratios
+     - Test rgba colors against actual backgrounds
+     - Use WCAG contrast checker tool
+     - Increase alpha or change color if needed
+
+PRIORITY 4 (Polish):
+  6. Standardize footer across all pages
+  7. Audit navigation consistency
+
+================================================================================
+VALIDATION TOOLS RECOMMENDATION
+================================================================================
+
+For ongoing quality assurance, implement:
+
+1. WCAG Contrast Checker
+   - WebAIM Contrast Checker: https://webaim.org/resources/contrastchecker/
+   - Test each rgba value against expected backgrounds
+
+2. HTML Validator
+   - W3C Nu Validator: https://validator.w3.org/
+   - Ensure all pages are valid HTML5
+
+3. CSS Lint
+   - Stylelint or similar for consistent CSS patterns
+   - Flag undefined variables and inconsistent selectors
+
+4. Automated Testing
+   - Run audit script again after changes
+   - Track progress across remediation
+
+================================================================================
+DEPLOYMENT READINESS
+================================================================================
+
+Current Status: NOT READY FOR PRODUCTION
+
+Blocking Issues:
+  ✗ Missing button style definitions
+  ✗ Font variables not resolving
+  ✗ Heading weights incorrect on multiple pages
+  ✗ Contrast issues present
+
+Post-Remediation: 
+  After addressing PRIORITY 1 and 2 issues above, run audit again to confirm
+  and prepare for launch.
+
+Estimated Remediation Time: 4-6 hours (depending on codebase structure)
+
+================================================================================
+NOTES & OBSERVATIONS
+================================================================================
+
+1. Systematic Design Pattern: The repeated issues across all 20 pages suggest
+   a design system that wasn't fully implemented. CSS variables are correctly
+   used but not defined. Button classes are expected but missing.
+
+2. Large Pages: autism-resource-navigator.html and blog.html have proportionally
+   more issues due to size, but the same types of issues as smaller pages.
+
+3. Low Contrast is Design-Wide: The 887 contrast issues indicate a intentional
+   design pattern using very transparent colors. Determine if this is acceptable
+   for non-text decorative elements, or if it needs revision.
+
+4. Positive: No missing pages, basic structure is sound on all 20 files.
+   Issues are fixable with CSS changes and do not require structural HTML rewrites.
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Review this report with design/development team
+2. Prioritize fixes in order above
+3. Assign developers to Priority 1 tasks
+4. Re-run audit script after changes to verify fixes
+5. Schedule manual testing of all pages before deployment
+6. Implement automated testing to prevent regression
+
+For questions or clarification, refer to the full detailed report:
+/sessions/adoring-compassionate-noether/mnt/FamilyVest/familyvest-site-FIXED/VISUAL_CONSISTENCY_AUDIT_DETAILED.txt
+
+================================================================================

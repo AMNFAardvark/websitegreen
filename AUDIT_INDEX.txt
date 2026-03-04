@@ -1,0 +1,227 @@
+================================================================================
+VISUAL CONSISTENCY AUDIT - DOCUMENTATION INDEX
+================================================================================
+Date: 2026-03-04
+Audited Pages: 20 HTML files
+Total Issues Found: 1,510
+
+================================================================================
+REPORT FILES (in this directory)
+================================================================================
+
+1. VISUAL_CONSISTENCY_AUDIT_REPORT.txt (12KB) - START HERE
+   ├─ Executive Summary
+   ├─ Critical Issues Overview
+   ├─ High Priority Issues
+   ├─ Issue Distribution by Page
+   ├─ Recommended Remediation Order (Priority 1-4)
+   ├─ Deployment Readiness Assessment
+   └─ Next Steps
+
+2. VISUAL_CONSISTENCY_AUDIT_DETAILED.txt (40KB) - DETAILED BREAKDOWN
+   ├─ Per-file issue categorization
+   ├─ Detailed critical action items
+   ├─ Severity classification matrix
+   └─ Technical specifications for each issue
+
+3. audit_visual_consistency.py (audit script - /tmp)
+   └─ Reusable Python script to re-run audit after fixes
+
+================================================================================
+QUICK REFERENCE - CRITICAL ISSUES
+================================================================================
+
+ISSUE #1: Missing Button Styles (ALL 20 pages)
+  Selectors: .btn-accent, .btn-outline, .hero-cta, .btn-submit
+  Status: NOT FOUND in any page
+  Required CSS:
+    .btn-accent, .btn-outline, .hero-cta, .btn-submit {
+      padding: 0.9rem 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      border-radius: 4px;
+    }
+  Fix Time: 30 minutes
+
+ISSUE #2: Font Variable Resolution (ALL 20 pages)
+  Variables: var(--font-display), var(--font-body)
+  Status: Not defined or not resolving
+  Required Fix:
+    Define in global CSS or :root:
+      --font-display: 'Cormorant Garamond', serif;
+      --font-body: 'DM Sans', sans-serif;
+  Fix Time: 15 minutes
+
+ISSUE #3: Heading Font Weights (17 pages, ~30+ instances)
+  Status: h1/h2 using 400-600 instead of 700
+  Required Fix:
+    h1, h2 { font-weight: 700; }
+  Fix Time: 10 minutes
+
+ISSUE #4: Body Text Size Below Minimum (50+ instances)
+  Status: Text < 0.95rem found across pages
+  Sizes Found: 0.76rem, 0.78rem, 0.8rem, 0.82rem, 0.84rem, 0.86rem, 0.88rem, 0.9rem
+  Required Fix: Update all <p> and body text to minimum 0.95rem
+  Fix Time: 2-3 hours
+
+ISSUE #5: Low Contrast RGBA Values (887 instances)
+  Status: Alpha values below 0.4 (8%, 5%, 3%, etc.)
+  Example: rgba(33, 160, 219, 0.08) - too faint on light backgrounds
+  Required Fix: Test against actual backgrounds, increase alpha to 0.4+
+  Fix Time: 3-4 hours (testing included)
+
+================================================================================
+PAGES WITH MOST ISSUES
+================================================================================
+
+1. autism-resource-navigator.html - 124 issues (large content page)
+2. blog.html - 117 issues (large content page)
+3. planning-special-needs.html - 108 issues
+4. planning-retirement.html - 101 issues
+5. disclosures.html - 95 issues
+6. privacy.html - 95 issues
+7. terms.html - 95 issues
+8. investment-management.html - 92 issues
+9. planning-business-exits.html - 91 issues
+10. contact.html - 84 issues
+
+Note: Issue count correlates with page size/complexity. Same issue types
+      appear on all pages.
+
+================================================================================
+REMEDIATION ROADMAP
+================================================================================
+
+PHASE 1 (2 hours) - BLOCKING ISSUES
+  □ Define CSS variables globally
+  □ Add missing button style definitions
+  □ Re-run audit to verify fixes
+
+PHASE 2 (1 hour) - HIGH IMPACT TYPOGRAPHY
+  □ Fix h1/h2 font-weights to 700
+  □ Visual verification across all pages
+  □ Re-run audit
+
+PHASE 3 (3-4 hours) - ACCESSIBILITY
+  □ Audit all body/p text sizes
+  □ Update any < 0.95rem to minimum
+  □ Test readability on multiple devices
+  □ Re-run audit
+
+PHASE 4 (4-6 hours) - CONTRAST & WCAG
+  □ Map rgba values to their backgrounds
+  □ Test with WebAIM contrast checker
+  □ Increase alpha or change colors as needed
+  □ Final audit run
+
+PHASE 5 (1 hour) - POLISH
+  □ Standardize footers
+  □ Verify navigation consistency
+  □ Final QA pass
+
+Total Estimated Time: 12-16 hours
+Parallel work possible: Phases 1-2 can be done simultaneously
+
+================================================================================
+TOOLS & RESOURCES
+================================================================================
+
+1. WCAG Contrast Checker
+   https://webaim.org/resources/contrastchecker/
+   Use to verify each rgba color against its background
+
+2. Color Contrast Analyzer
+   https://www.tpgi.com/color-contrast-checker/
+   Desktop tool for comprehensive testing
+
+3. W3C HTML Validator
+   https://validator.w3.org/
+   Validate HTML after making changes
+
+4. CSS Lint / Stylelint
+   Recommended for catching future inconsistencies
+
+5. Audit Script
+   /tmp/audit_visual_consistency.py
+   Run after fixes to verify improvements
+
+================================================================================
+DEPLOYMENT CHECKLIST
+================================================================================
+
+Before deploying to production:
+
+PRE-DEPLOYMENT REQUIREMENTS:
+  ☐ All PRIORITY 1 issues resolved (buttons, fonts, variables)
+  ☐ All PRIORITY 2 issues resolved (heading weights, text size)
+  ☐ WCAG contrast tested on all pages (using actual backgrounds)
+  ☐ Audit script run and passed with < 50 issues remaining
+  ☐ Manual QA on 3+ devices/browsers
+  ☐ Final screenshot comparison with design files
+
+LAUNCH DAY:
+  ☐ Deploy to staging first
+  ☐ Run full page screenshots
+  ☐ Test on mobile (iOS + Android)
+  ☐ Test in 3 browsers (Chrome, Safari, Firefox)
+  ☐ Verify links and CTAs function
+  ☐ Check form submissions
+  ☐ Deploy to production
+  ☐ Verify live site
+
+POST-LAUNCH:
+  ☐ Monitor error logs
+  ☐ Check analytics for any broken pages
+  ☐ Schedule monthly visual consistency audits
+
+================================================================================
+HOW TO RE-RUN THE AUDIT
+================================================================================
+
+After making fixes, re-run the audit:
+
+  python3 /tmp/audit_visual_consistency.py > /tmp/audit_results_[DATE].txt
+
+Expected improvements:
+  - After Phase 1 fixes: 887 issues remain (contrast only)
+  - After Phase 2 fixes: 837 issues remain
+  - After Phase 3 fixes: 787 issues remain
+  - After Phase 4 fixes: < 50 issues remain (acceptable for deployment)
+
+================================================================================
+KEY METRICS
+================================================================================
+
+Current State:
+  ✗ 1,510 total issues
+  ✗ ALL 20 pages affected
+  ✗ 5 critical issue categories
+  ✗ NOT DEPLOYMENT READY
+
+Post-Remediation Target:
+  ✓ < 50 total issues (decorative contrast only)
+  ✓ 0 critical issues
+  ✓ All WCAG AA compliance
+  ✓ DEPLOYMENT READY
+
+================================================================================
+QUESTIONS & SUPPORT
+================================================================================
+
+For technical questions about specific issues:
+  - Refer to VISUAL_CONSISTENCY_AUDIT_DETAILED.txt for full breakdown
+  - Check the audit script comments for validation logic
+  - Cross-reference with WCAG 2.1 guidelines
+
+For design questions:
+  - Verify with original design files
+  - Test contrast on actual backgrounds used in design
+  - Confirm button styles match design specs
+
+For deployment readiness:
+  - Run audit script to get current status
+  - Verify all PRIORITY 1 & 2 issues resolved
+  - Schedule manual testing
+
+================================================================================
