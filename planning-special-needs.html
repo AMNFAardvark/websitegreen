@@ -14,7 +14,7 @@
 
 <style>
 /* === SKIP LINK === */
-.skip-link{position:absolute;top:-40px;left:0;background:#21A0DB;color:#fff;padding:8px 16px;z-index:10000;font-weight:600;font-size:0.9rem;transition:top 0.2s}
+.skip-link{position:absolute;top:-40px;left:0;background:#21A0DB;color:#ffffff;padding:8px 16px;z-index:10000;font-weight:600;font-size:0.9rem;transition:top 0.2s}
 .skip-link:focus{top:0}
 
 /* === STANDARDIZED CSS VARIABLES === */
@@ -36,7 +36,7 @@
  --gray-600: #6b7280;
  --gray-700: #374151;
  --content-max: 1200px;
- --content-narrow: 720px;;--white:#ffffff}
+ --content-narrow: 720px;;--white:#fffffffff}
 
 /* === STANDARDIZED NAV === */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 clamp(1rem,3vw,2.5rem);height:72px;display:flex;align-items:center;justify-content:space-between;transition:transform 0.4s ease,background 0.3s ease;background:transparent}
@@ -47,16 +47,16 @@
 .nav-logo img{height:38px;width:auto}
 .nav-links{display:flex;gap:clamp(0.8rem,2vw,2rem);list-style:none;margin:0;padding:0;align-items:center}
 .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s;letter-spacing:0.02em}
-.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:hover,.nav-links a.active{color:#ffffff}
 .nav-dropdown{position:relative}
 .nav-dropdown-menu{position:absolute;top:calc(100% + 0.5rem);left:50%;transform:translateX(-50%);background:rgba(10,22,40,0.97);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0;min-width:200px;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s;box-shadow:0 8px 24px rgba(0,0,0,0.3)}
 .nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible}
 .nav-dropdown-menu a{display:block;padding:0.6rem 1.2rem;font-size:0.85rem;white-space:nowrap}
-.nav-dropdown-menu a:hover{background:rgba(255,255,255,0.05);color:#fff}
+.nav-dropdown-menu a:hover{background:rgba(255,255,255,0.05);color:#ffffff}
 .nav-cta a{background:linear-gradient(135deg,#21A0DB,#4BB8E8);color:#0a1628;padding:0.55rem 1.4rem;border-radius:6px;font-weight:600;font-size:0.85rem;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
 .nav-cta a:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(33,160,219,0.3)}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:2}
-.nav-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:0.3s}
+.nav-toggle span{width:24px;height:2px;background:#ffffff;border-radius:2px;transition:0.3s}
 @media(max-width:900px){
  .nav-links,.nav-cta{display:none}
  .nav-toggle{display:flex}
@@ -69,7 +69,7 @@
 .site-footer{background:#080f1a;color:rgba(255,255,255,0.6);padding:4rem clamp(1rem,4vw,3rem) 2rem;font-size:0.88rem;line-height:1.6}
 .footer-inner{max-width:1200px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:2rem 3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.08)}
-.footer-brand{font-family:var(--font-display,'Cormorant Garamond',Georgia,serif);font-size:1.5rem;font-weight:600;color:#fff;margin-bottom:0.2rem}
+.footer-brand{font-family:var(--font-display,'Cormorant Garamond',Georgia,serif);font-size:1.5rem;font-weight:600;color:#ffffff;margin-bottom:0.2rem}
 .footer-brand-sub{font-size:0.8rem;color:rgba(255,255,255,0.4);margin-bottom:1rem}
 .footer-contact-item{margin-bottom:0.3rem}
 .footer-contact-item a{color:rgba(255,255,255,0.6);text-decoration:none}
@@ -77,7 +77,7 @@
 .footer-social{display:flex;gap:1rem;margin-top:1rem}
 .footer-social a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.82rem}
 .footer-social a:hover{color:#21A0DB}
-.footer-col h5{color:#fff;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 1rem;font-weight:600}
+.footer-col h5{color:#ffffff;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 1rem;font-weight:600}
 .footer-col a{display:block;color:rgba(255,255,255,0.55);text-decoration:none;padding:0.25rem 0;font-size:0.85rem}
 .footer-col a:hover{color:#21A0DB}
 .footer-bottom{padding-top:2rem;text-align:center}
@@ -97,8 +97,8 @@
 :root {
  --navy-deep:#0A1628;--navy:#0F2140;--navy-mid:#162D54;--navy-light:#1C3A6E;
  --accent:#21A0DB;--accent-light:#4BB8E8;--accent-muted:rgba(33,160,219,0.15);
- --sand:#f5f3ef;--sand-dark:#EEEEEE;--white:#FFF;--off-white:#FAFAF8;
- --navy-mid:#2D2D2D;--gray-600:#4A4A4A;--gray-500:#666;--gray-400:#999;
+ --sand:#f5f3ef;--sand-dark:#EEEEEE;--white:#ffffff;--off-white:#F8F7F4;
+ --navy-mid:#162D54;--gray-600:#4A4A4A;--gray-500:#808A94;--gray-400:#9ca3af;
  --accent-cyan:#2BAAE2;--gray-500:#808A94;
  --font-display:'Cormorant Garamond',Georgia,serif;
  --font-body:'DM Sans',system-ui,-apple-system,sans-serif;
