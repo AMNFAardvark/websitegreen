@@ -70,22 +70,22 @@
 .footer-inner{max-width:1200px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:2rem 3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.08)}
 .footer-brand{font-family:var(--font-display,'Cormorant Garamond',Georgia,serif);font-size:1.5rem;font-weight:600;color:#ffffff;margin-bottom:0.2rem}
-.footer-brand-sub{font-size:0.8rem;color:rgba(255,255,255,0.4);margin-bottom:1rem}
+.footer-brand-sub{font-size:0.8rem;color: rgba(255, 255, 255, 0.6);margin-bottom:1rem}
 .footer-contact-item{margin-bottom:0.3rem}
 .footer-contact-item a{color:rgba(255,255,255,0.6);text-decoration:none}
 .footer-contact-item a:hover{color:#21A0DB}
 .footer-social{display:flex;gap:1rem;margin-top:1rem}
-.footer-social a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.82rem}
+.footer-social a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.82rem}
 .footer-social a:hover{color:#21A0DB}
 .footer-col h5{color:#ffffff;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 1rem;font-weight:600}
-.footer-col a{display:block;color:rgba(255,255,255,0.55);text-decoration:none;padding:0.25rem 0;font-size:0.85rem}
+.footer-col a{display:block;color:rgba(255, 255, 255, 0.75);text-decoration:none;padding:0.25rem 0;font-size:0.85rem}
 .footer-col a:hover{color:#21A0DB}
 .footer-bottom{padding-top:2rem;text-align:center}
 .footer-legal-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
-.footer-legal-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.78rem}
+.footer-legal-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.78rem}
 .footer-legal-links a:hover{color:rgba(255,255,255,0.7)}
-.footer-disclosure{font-size:0.72rem;color:rgba(255,255,255,0.3);max-width:800px;margin:0 auto 1rem;line-height:1.5}
-.footer-copyright{font-size:0.72rem;color:rgba(255,255,255,0.25)}
+.footer-disclosure{font-size:0.72rem;color: rgba(255, 255, 255, 0.6);max-width:800px;margin:0 auto 1rem;line-height:1.5}
+.footer-copyright{font-size:0.72rem;color: rgba(255, 255, 255, 0.6)}
 @media(max-width:768px){
  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
  .footer-brand-col{grid-column:1/-1}
@@ -133,9 +133,9 @@ body{font-family:var(--font-body);color:var(--navy-mid);background:var(--white);
 .hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:600;line-height:1.12;color:var(--accent);margin-bottom:1.5rem}
 .hero-sub{font-size:1.05rem;color:rgba(255,255,255,.78);max-width:560px;line-height:1.8;margin-bottom:2.5rem}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-accent{background:var(--accent);color:var(--navy-deep);padding:.85rem 2rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:.92rem;transition:background .25s,transform .2s;display:inline-block}
+.btn-accent{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2.2rem;background:var(--accent);color:var(--navy-deep);font-family:var(--font-body);font-size:0.95rem;font-weight:600;border-radius:4px;border:none;cursor:pointer;letter-spacing:0.04em;text-transform:none;transition:background 0.2s,transform 0.15s}.btn-accent:hover{background:#1680b2;transform:translateY(-1px)}
 .btn-accent:hover{background:var(--accent-light);transform:translateY(-1px)}
-.btn-ghost{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);padding:.85rem 2rem;border-radius:4px;text-decoration:none;font-weight:500;font-size:.92rem;transition:border-color .25s,color .25s;display:inline-block}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2.2rem;background:transparent;color:var(--accent);font-family:var(--font-body);font-size:0.95rem;font-weight:600;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.04em;text-transform:none;transition:background 0.2s,transform 0.15s}.btn-ghost:hover{background:rgba\(33,160,219,0.12\);transform:translateY\(-1px\)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 
 /* QUESTIONS STRIP */
@@ -261,8 +261,8 @@ body{font-family:var(--font-body);color:var(--navy-mid);background:var(--white);
  .hero-ctas a,.closing-ctas a{text-align:center}
 }
 
-.footer-tagline{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:1rem;line-height:1.5;max-width:280px}
-.footer-social a{color:rgba(255,255,255,0.4);transition:color 0.2s}
+.footer-tagline{font-size:0.82rem;color:rgba(255,255,255,0.6);margin-bottom:1rem;line-height:1.5;max-width:280px}
+.footer-social a{color:rgba(255,255,255,0.6);transition:color 0.2s}
 .footer-social a:hover{color:#21A0DB}
 .footer-social svg{vertical-align:middle}
 .footer-cta-link{display:inline-block;color:#21A0DB;font-size:0.85rem;font-weight:600;margin-top:0.75rem;transition:color 0.2s}

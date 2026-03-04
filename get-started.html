@@ -70,22 +70,22 @@
 .footer-inner{max-width:1200px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:2rem 3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.08)}
 .footer-brand{font-family:var(--font-display,'Cormorant Garamond',Georgia,serif);font-size:1.5rem;font-weight:600;color:#ffffff;margin-bottom:0.2rem}
-.footer-brand-sub{font-size:0.8rem;color:rgba(255,255,255,0.4);margin-bottom:1rem}
+.footer-brand-sub{font-size:0.8rem;color: rgba(255, 255, 255, 0.6);margin-bottom:1rem}
 .footer-contact-item{margin-bottom:0.3rem}
 .footer-contact-item a{color:rgba(255,255,255,0.6);text-decoration:none}
 .footer-contact-item a:hover{color:#21A0DB}
 .footer-social{display:flex;gap:1rem;margin-top:1rem}
-.footer-social a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.82rem}
+.footer-social a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.82rem}
 .footer-social a:hover{color:#21A0DB}
 .footer-col h5{color:#ffffff;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 1rem;font-weight:600}
-.footer-col a{display:block;color:rgba(255,255,255,0.55);text-decoration:none;padding:0.25rem 0;font-size:0.85rem}
+.footer-col a{display:block;color:rgba(255, 255, 255, 0.75);text-decoration:none;padding:0.25rem 0;font-size:0.85rem}
 .footer-col a:hover{color:#21A0DB}
 .footer-bottom{padding-top:2rem;text-align:center}
 .footer-legal-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
-.footer-legal-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.78rem}
+.footer-legal-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.78rem}
 .footer-legal-links a:hover{color:rgba(255,255,255,0.7)}
-.footer-disclosure{font-size:0.72rem;color:rgba(255,255,255,0.3);max-width:800px;margin:0 auto 1rem;line-height:1.5}
-.footer-copyright{font-size:0.72rem;color:rgba(255,255,255,0.25)}
+.footer-disclosure{font-size:0.72rem;color: rgba(255, 255, 255, 0.6);max-width:800px;margin:0 auto 1rem;line-height:1.5}
+.footer-copyright{font-size:0.72rem;color: rgba(255, 255, 255, 0.6)}
 @media(max-width:768px){
  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
  .footer-brand-col{grid-column:1/-1}
@@ -168,15 +168,7 @@ body{font-family:var(--font-body);color:#ffffff;background:var(--navy);line-heig
  color:rgba(255,255,255,.72);line-height:1.65;
  margin-bottom:2.5rem;animation:fadeUp .8s ease .22s both;
 }
-.hero-cta{
- display:inline-flex;align-items:center;gap:.5rem;
- background:var(--accent);color:var(--navy);
- font-family:var(--font-body);font-size:.85rem;font-weight:700;
- letter-spacing:.08em;text-transform:uppercase;
- padding:.9rem 2.2rem;border-radius:3px;text-decoration:none;
- transition:background .2s,transform .15s;
- animation:fadeUp .8s ease .32s both;
-}
+.hero-cta{display:inline-block;padding:0.9rem 2.2rem;background:var(--accent);color:var(--navy-deep);font-family:var(--font-body);font-size:0.95rem;font-weight:600;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.04em;text-transform:none;text-decoration:none;transition:background 0.2s,transform 0.15s}.hero-cta:hover{background:#1680b2;transform:translateY(-1px)}
 .hero-cta:hover{background:var(--accent-light);transform:translateY(-2px)}
 .hero-cta svg{width:16px;height:16px;fill:var(--navy);flex-shrink:0}
 
@@ -339,14 +331,7 @@ body{font-family:var(--font-body);color:#ffffff;background:var(--navy);line-heig
 }
 .fgrp textarea{resize:vertical;min-height:88px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.btn-submit{
- width:100%;padding:.8rem;margin-top:.3rem;
- background:var(--accent);color:var(--navy);
- border:none;border-radius:4px;cursor:pointer;
- font-family:var(--font-body);font-size:.84rem;font-weight:700;
- letter-spacing:.08em;text-transform:uppercase;
- transition:background .2s,transform .15s;
-}
+.btn-submit{display:inline-flex;align-items:center;justify-content:center;width:100%;padding:0.9rem 2.2rem;background:var(--accent);color:var(--navy-deep);font-family:var(--font-body);font-size:0.95rem;font-weight:600;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.04em;text-transform:none;transition:background 0.2s,transform 0.15s}.btn-submit:hover{background:#1680b2;transform:translateY\(-1px\)}.btn-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none}
 .btn-submit:hover{background:var(--accent-light);transform:translateY(-1px)}
 .fnote{
  font-family:var(--font-body);font-size:.68rem;
@@ -393,8 +378,8 @@ footer{background:#060e1c;padding:2.5rem 2rem;font-family:var(--font-body)}
 /* Animations */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-.footer-tagline{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:1rem;line-height:1.5;max-width:280px}
-.footer-social a{color:rgba(255,255,255,0.4);transition:color 0.2s}
+.footer-tagline{font-size:0.82rem;color:rgba(255,255,255,0.6);margin-bottom:1rem;line-height:1.5;max-width:280px}
+.footer-social a{color:rgba(255,255,255,0.6);transition:color 0.2s}
 .footer-social a:hover{color:#21A0DB}
 .footer-social svg{vertical-align:middle}
 .footer-cta-link{display:inline-block;color:#21A0DB;font-size:0.85rem;font-weight:600;margin-top:0.75rem;transition:color 0.2s}
